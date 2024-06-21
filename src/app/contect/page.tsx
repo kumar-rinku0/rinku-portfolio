@@ -72,6 +72,8 @@ const Contect = () => {
         if (!response.ok) {
           throw new Error(response.status.toString());
         }
+        const data = await response.json();
+        console.log(data);
         setAlert(true);
         setTimeout(() => {
           setAlert(false);

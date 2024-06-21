@@ -1,23 +1,23 @@
-import { FaGithub, FaLinkedin, FaYoutube, FaGooglePlusG} from "react-icons/fa"
+import { FaGithub, FaInstagram, FaLinkedin, FaYoutube, FaGooglePlusG} from "react-icons/fa"
 import Link from "next/link";
 import {SiGithub, SiLinkedin, SiLeetcode, SiGeeksforgeeks} from "react-icons/si"
 
 const socials = [
     {
         icon: <SiGithub />,
-        path: ""
+        path: "https://github.com/kumar-rinku0"
     },
     {
         icon: <FaLinkedin />,
-        path: ""
+        path: "https://www.linkedin.com/in/kumar-rinku0/"
     },
     {
         icon: <SiLeetcode />,
-        path: ""
+        path: "https://leetcode.com/kumar-rinku0/"
     },
     {
-        icon: <FaGooglePlusG />,
-        path: ""
+        icon: <FaInstagram />,
+        path: "https://www.instagram.com/kumar_rinku_/"
     },
 ]
 
