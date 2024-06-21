@@ -1,16 +1,26 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { motion } from "framer-motion";
 import { FaCheckCircle, FaExclamationTriangle } from "react-icons/fa"
 
-const error = {
-    icon: <FaExclamationTriangle className="text-red-500" />,
-    message: "somthing happend wrong.",
-}
 
-const success = {
-    icon: <FaCheckCircle className="text-accent" />,
-    message: "respose recorded.",
-}
+const errorTypes = [
+    {
+        type: "error",
+        icon: <FaExclamationTriangle className="text-red-500" />,
+        message: "somthing happend wrong.",
+    },
+    {
+        type: "success",
+        icon: <FaCheckCircle className="text-accent" />,
+        message: "respose recorded.",
+    },
+    {
+        type: "server",
+        icon: <FaExclamationTriangle className="text-red-500" />,
+        message: "email already exist.",
+    }
+]
+
 
 type props = {
     type: string,
@@ -20,7 +30,14 @@ type props = {
 
 }
 
-const Alert = ({type, containerStyle, iconStyle, messageStyle }: props) => {
+type prop = {
+    type: string,
+    icon: React.JSX.Element,
+    message: string,
+}
+
+const Alert = ({ type, containerStyle, iconStyle, messageStyle }: props) => {
+    const errorType: prop[] = errorTypes.filter((error) => error.type === type);
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -28,17 +45,22 @@ const Alert = ({type, containerStyle, iconStyle, messageStyle }: props) => {
         >
             <motion.div
                 initial={{ opacity: 1 }}
-                animate={{ opacity: 0, transition: { duration:1, delay: 2, ease: "easeOut" } }}
+                animate={{ opacity: 0, transition: { duration: 1, delay: 2, ease: "easeOut" } }}
                 className={containerStyle}
             >
-                <div className={iconStyle}>
-                    {type==="success" ? success.icon : error.icon}
-                </div>
-                <h3 className={messageStyle}>{type==="success" ? success.message : error.message}</h3>
+                {errorType.map((item, index) => {
+                    return (
+                        <div key={index} className="flex justify-center items-center gap-4">
+                            <div key={index} className={iconStyle}>{item.icon}</div>
+                            <h3 className={messageStyle}>{item.message}</h3>
+                        </div>
+                    )
+                })}
 
             </motion.div>
         </motion.div>
     )
 };
+
 
 export default Alert;

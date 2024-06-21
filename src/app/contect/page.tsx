@@ -74,10 +74,17 @@ const Contect = () => {
         }
         const data = await response.json();
         console.log(data);
+        if(data.success === false) {
+          setTypeAlert("server");
+        } else {
+          setTypeAlert("success");
+        }
+        
         setAlert(true);
         setTimeout(() => {
           setAlert(false);
         }, 3000);
+
       } catch (error) {
         console.error(error);
       }

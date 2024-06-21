@@ -9,10 +9,6 @@ export async function POST(req: NextRequest, res: NextResponse) {
   try {
     dbConnect();
     const { firstname, lastname, phoneno, email } = await req.json();
-    const info = await Info.find({}).where({ email });
-    if (info.length === 1) {
-      return NextResponse.json({ success: false, error: "email already exist." });
-    }
     const infos = await Info.create({
       firstname, lastname, phoneno, email,
     }); /* create a new model in the database */
