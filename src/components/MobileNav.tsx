@@ -53,9 +53,9 @@ const MobileNav = () => {
             <Link
               href={link.path}
               key={index}
-              className={`${link.path === pathname && "text-accent border-b-2 border-accent"} capitalize text-sm hover:text-accent`}
+              className={`${link.path === pathname && "text-accent border-b-2 border-accent"} text-base hover:text-accent`}
             >
-              <SheetClose> {link.name} </SheetClose>
+              <SheetClose className="capitalize"> {link.name} </SheetClose>
             </Link>
           );
         })}</nav>
