@@ -13,22 +13,12 @@ import { SiTailwindcss, SiNextdotjs, SiReact, SiCplusplus, SiMongoose, SiNodedot
 const experience = {
   icon: "",
   title: "My Experience",
-  description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta mollitia molestiae facilis.",
+  description: "i am a fresher software developer don't have much experience but i have developer several project and application.",
   items: [
     {
-      company: "AptClouds Software Ltd.",
-      position: "Software Developer",
-      duration: "2023 - 2024"
-    },
-    {
-      company: "Cytrexa Software Ltd.",
-      position: "MERN Developer",
-      duration: "2022 - 2023"
-    },
-    {
-      company: "JOY Software Ltd.",
-      position: "Web Developer",
-      duration: "2021 - 2022"
+      company: "Traine Intern",
+      position: "Code Alpha",
+      duration: "ONLY - 3 Months"
     },
   ]
 }
@@ -36,7 +26,7 @@ const experience = {
 const education = {
   icon: "",
   title: "My Education",
-  description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta mollitia molestiae facilis.",
+  description: "i have completed computer engineering from ciitm college, jaipur and alpha course from apna college.",
   items: [
     {
       institute: "Apna College",
@@ -53,7 +43,7 @@ const education = {
 
 const skill = {
   title: "My Skills",
-  description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta mollitia molestiae facilis.",
+  description: "i have learned several technologies and i'm not done yet, means i belive there is always more to learn.",
   items: [
     {
       icon: <FaHtml5 className="text-5xl" />,
@@ -92,7 +82,7 @@ const skill = {
 
 const about = {
   title: "About MySelf",
-  description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta mollitia molestiae facilis.",
+  description: "I'm a software developer as per told, if you already seen homepage of website. i would love to work with you if you need my assitance in development.",
   info: [
     {
       fieldname: "Name",

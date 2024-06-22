@@ -32,7 +32,7 @@ const projects = [
     num: "02",
     categroy: "MERN application",
     title: "Blogs At All",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero harum libero esse facilis possimus voluptates non voluptas est.",
+    description: "This is a blog application there you write you blogs and tag with your friends as well as you can read and comment on others blogs.",
     image: "/img/3.png",
     stack: [
       { name: "ejs", icon: <SiEjs /> },
@@ -48,7 +48,7 @@ const projects = [
     num: "03",
     categroy: "Desktop Application",
     title: "Currency Converter",
-    description: "a java desktop application that can change the money of any country into the one you like. technology : java project using hashing, api, css, javafx, netbeans ide, hashmap.",
+    description: "a java desktop application that can change the money of any country into the one you like. besically using HashMap and REST API.",
     image: "/img/4.png",
     stack: [
       { name: "java", icon: <FaJava /> },
@@ -62,7 +62,7 @@ const projects = [
     num: "04",
     categroy: "Web Application",
     title: "Call Toingg",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero harum libero esse facilis possimus voluptates non voluptas est.",
+    description: "Web application for providing a good communication service, based on sevice charges.",
     image: "/img/1.png",
     stack: [
       { name: "nextjs", icon: <SiNextdotjs /> },

@@ -8,25 +8,25 @@ const services = [
   {
     num: '01',
     title: "Web Developer",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quidem blanditiis quos",
+    description: "I have already developed several web application on several technologies, you can browse them if you want.",
     href: "/contect",
   },
   {
     num: '02',
     title: "Node Developer",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quidem blanditiis quos",
+    description: "i would love to work and colabrate on runing project as nodejs developer",
     href: "/contect",
   },
   {
     num: '03',
     title: "MERN Developer",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quidem blanditiis quos",
+    description: "There are many MERN application that i have developed recently, click to connect with me.",
     href: "/contect",
   },
   {
     num: '04',
     title: "UI/UX Design",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quidem blanditiis quos",
+    description: "I think you got the idea of my ui and ux design.",
     href: "/contect",
   },
   
