@@ -30,7 +30,7 @@ const projects = [
   },
   {
     num: "02",
-    categroy: "full stack application",
+    categroy: "MERN application",
     title: "Blogs At All",
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero harum libero esse facilis possimus voluptates non voluptas est.",
     image: "/img/3.png",
@@ -41,7 +41,7 @@ const projects = [
       { name: "express", icon: <SiExpress /> },
     ],
     link: [
-      { name: "github", src: "/", icon: <FaGithub /> },
+      { name: "github", src: "https://github.com/kumar-rinku0/", icon: <FaGithub /> },
     ]
   },
   {
@@ -70,9 +70,7 @@ const projects = [
       { name: "ts", icon: <SiTypescript /> },
     ],
     link: [
-      { name: "live", src: "/", icon: <FaLink /> },
-      { name: "github", src: "/", icon: <FaGithub /> },
-      { name: "visit", src: "/", icon: <FaLink /> },
+      { name: "github", src: "/https://github.com/kumar-rinku0/CurrencyConverterFX.git", icon: <FaGithub /> },
     ]
   },
 ]
@@ -144,7 +142,7 @@ const Work = () => {
                 </div>
                 {/* {img} */}
                 <div className="w-full h-full relative outline-none" >
-                  <Image className="w-full h-full object-cover selection:not-sr-only" src={project.image} alt="" />
+                  <Image fill={true} className="w-full h-full object-cover selection:not-sr-only" src={project.image} alt="" />
                   <button
                     className="text-accent absolute top-[50%] -translate-x-0 translate-y-[-50%] left-0 p-2 focus-visible:outline-none"
                     onClick={handleprev} 
