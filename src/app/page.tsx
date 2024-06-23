@@ -13,9 +13,9 @@ export default function Home() {
     return (
         <section className="h-full">
             <div className="container h-full mx-auto">
-                <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-16">
+                <div className="flex flex-col lg:flex-row items-center justify-evenly xl:justify-between lg:pt-8 lg:pb-16">
                     {/* text  */}
-                    <div className="text-center xl:text-left order-2 xl:order-none">
+                    <div className="text-center lg:text-left order-2 lg:order-none">
                         <span>Software Developer</span>
                         <h1 className="h1">
                             Hello I&apos;m <br /> <span className="text-accent">Rinku Kumar</span>
@@ -24,7 +24,7 @@ export default function Home() {
                             I excel at crafting elegent digital expriences and i am proficient in various programming languages and technologies.
                         </p>
                         {/* buttons and socials */}
-                        <div className="flex flex-col xl:flex-row items-center gap-8">
+                        <div className="flex flex-col lg:flex-row items-center gap-8">
                             <Link href={"/rinku_kumar_resume.pdf"}>
                                 <Button
                                     variant={"outline"}
@@ -36,7 +36,7 @@ export default function Home() {
                                 </Button>
                             </Link>
                             {/* socials */}
-                            <div className="mb-8 xl:mb-0">
+                            <div className="mb-8 lg:mb-0">
                                 <Socials
                                     containerStyle="flex gap-6"
                                     iconStyle="h-9 w-9 border border-accent rounded-full flex justify-center items-center object-contain text-accent text-base hover:bg-accent hover:text-primary hover:trasition-all"
@@ -45,7 +45,7 @@ export default function Home() {
                         </div>
                     </div>
                     {/* photo */}
-                    <div className="order-1 xl:order-none">
+                    <div className="order-1 lg:order-none">
                         <Photo />
                     </div>
                 </div>
