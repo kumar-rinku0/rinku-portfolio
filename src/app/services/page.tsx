@@ -8,19 +8,19 @@ const services = [
   {
     num: '01',
     title: "Web Developer",
-    description: "I have already developed several web application on several technologies, you can browse them if you want.",
+    description: "You are welcome to peruse the various web applications that I have already made utilising a variety of technologies.",
     href: "/contect",
   },
   {
     num: '02',
     title: "Node Developer",
-    description: "i would love to work and colabrate on runing project as nodejs developer",
+    description: "As a Node.js developer, I would adore working on ongoing projects with others.",
     href: "/contect",
   },
   {
     num: '03',
     title: "MERN Developer",
-    description: "There are many MERN application that i have developed recently, click to connect with me.",
+    description: "I've recently developed a lot of MERN applications. To connect with me, click the arrow.",
     href: "/contect",
   },
   {

@@ -32,7 +32,7 @@ const projects = [
     num: "02",
     categroy: "MERN application",
     title: "Blogs At All",
-    description: "This is a blog application there you write you blogs and tag with your friends as well as you can read and comment on others blogs.",
+    description: "With this blog software, you can read and leave comments on other people's blogs in addition to writing your own and tagging your friends in them.",
     image: "/img/3.png",
     stack: [
       { name: "ejs", icon: <SiEjs /> },
@@ -48,7 +48,7 @@ const projects = [
     num: "03",
     categroy: "Desktop Application",
     title: "Currency Converter",
-    description: "a java desktop application that can change the money of any country into the one you like. besically using HashMap and REST API.",
+    description: "A desktop Java programme that allows you to select the desired money from any country. in particular making use of REST APIs and HashMap.",
     image: "/img/4.png",
     stack: [
       { name: "java", icon: <FaJava /> },
@@ -62,7 +62,7 @@ const projects = [
     num: "04",
     categroy: "Web Application",
     title: "Call Toingg",
-    description: "Web application for providing a good communication service, based on sevice charges.",
+    description: "Web application based on service fees that offers a good communication service.",
     image: "/img/1.png",
     stack: [
       { name: "nextjs", icon: <SiNextdotjs /> },

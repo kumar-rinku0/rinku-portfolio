@@ -13,7 +13,7 @@ import { SiTailwindcss, SiNextdotjs, SiReact, SiCplusplus, SiMongoose, SiNodedot
 const experience = {
   icon: "",
   title: "My Experience",
-  description: "i am a fresher software developer don't have much experience but i have developer several project and application.",
+  description: "I am a fresher software developer and don't have much experience, but I have developed several projects and applications.",
   items: [
     {
       company: "Traine Intern",
@@ -26,7 +26,7 @@ const experience = {
 const education = {
   icon: "",
   title: "My Education",
-  description: "i have completed computer engineering from ciitm college, jaipur and alpha course from apna college.",
+  description: "I have finished an alpha course at Apna College and computer engineering at Ciitm College in Jaipur.",
   items: [
     {
       institute: "Apna College",
@@ -43,7 +43,7 @@ const education = {
 
 const skill = {
   title: "My Skills",
-  description: "i have learned several technologies and i'm not done yet, means i belive there is always more to learn.",
+  description: "I think there is always more to learn because I have learned a number of technologies and I'm not done yet.",
   items: [
     {
       icon: <FaHtml5 className="text-5xl" />,
@@ -82,7 +82,7 @@ const skill = {
 
 const about = {
   title: "About MySelf",
-  description: "I'm a software developer as per told, if you already seen homepage of website. i would love to work with you if you need my assitance in development.",
+  description: "If you've already visited the website's homepage, then you already know that I'm a software engineer. If you require my help with development, I would be delighted to collaborate with you.",
   info: [
     {
       fieldname: "Name",
