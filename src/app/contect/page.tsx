@@ -75,7 +75,11 @@ const Contect = () => {
         const data = await response.json();
         console.log(data);
         if(data.success === false) {
-          setTypeAlert("server");
+          if(data.error.keyValue.email) {
+            setTypeAlert("server1");
+          } else {
+            setTypeAlert("server2");
+          }
         } else {
           setTypeAlert("success");
         }
