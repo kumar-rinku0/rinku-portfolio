@@ -7,22 +7,22 @@ const errorTypes = [
     {
         type: "error",
         icon: <FaExclamationTriangle className="text-red-500" />,
-        message: "Fill out the details.",
+        message: "fill out the details.",
     },
     {
         type: "success",
         icon: <FaCheckCircle className="text-accent" />,
-        message: "Respose recorded.",
+        message: "respose recorded.",
     },
     {
         type: "server1",
         icon: <FaExclamationTriangle className="text-red-500" />,
-        message: "E-mail already exist.",
+        message: "e-mail already exist.",
     },
     {
         type: "server2",
         icon: <FaExclamationTriangle className="text-red-500" />,
-        message: "Phone No already exist.",
+        message: "phone no already exist.",
     }
 ]
 
