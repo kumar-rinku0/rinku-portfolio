@@ -108,6 +108,8 @@ const Work = () => {
               <div className="text-8xl leading-none text-transparent text-outline font-extrabold">{project.num}</div>
               {/* {project categroy} */}
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.categroy}</h2>
+              {/* {project title} */}
+              <h3 className="text-accent">{project.title}</h3>
               {/* {project description} */}
               <p className="text-white/60">{project.description}</p>
               {/* {project icons or tech names} */}
@@ -124,8 +126,8 @@ const Work = () => {
               <div className="flex items-center gap-4">
                 {project.link.map((item, index) => {
                   return (
-                    <div key={index} className="w-16 h-16 rounded-full border border-accent flex justify-center items-center">
-                      <Link href={item.src} className="text-4xl">
+                    <div key={index} className="w-14 h-14 rounded-full border border-accent flex justify-center items-center hover:text-primary hover:bg-accent cursor-pointer">
+                      <Link href={item.src} className="text-3xl">
                         {item.icon}
                       </Link>
                     </div>
@@ -142,7 +144,7 @@ const Work = () => {
                 </div>
                 {/* {img} */}
                 <div className="w-full h-full relative outline-none" >
-                  <Image fill={true} className="w-full h-full object-cover selection:not-sr-only" src={project.image} alt="" />
+                  <Image fill={true} sizes="(max-width:full)" priority className="w-full h-full object-cover selection:not-sr-only" src={project.image} alt="" />
                   <button
                     className="text-accent absolute top-[50%] -translate-x-0 translate-y-[-50%] left-0 p-2 focus-visible:outline-none"
                     onClick={handleprev} 
