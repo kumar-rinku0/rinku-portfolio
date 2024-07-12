@@ -2,8 +2,9 @@
 
 import React, { useState } from "react"
 import { motion } from "framer-motion"
+import { IoMdPaperPlane } from "react-icons/io";
 import { FaCss3, FaGithub, FaHtml5, FaNodeJs, FaJava, FaLink, FaYoutube } from "react-icons/fa6"
-import { SiTailwindcss, SiTypescript, SiEjs, SiMongoose, SiExpress, SiJavascript, SiNextdotjs } from "react-icons/si"
+import { SiTailwindcss, SiTypescript, SiEjs, SiMongoose, SiExpress, SiJavascript, SiNextdotjs, SiFramer } from "react-icons/si"
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa6"
 import { Divide } from "lucide-react";
 import Image from "next/image";
@@ -55,7 +56,7 @@ const projects = [
       { name: "css", icon: <FaCss3 /> },
     ],
     link: [
-      { name: "github", src: "/https://github.com/kumar-rinku0/CurrencyConverterFX.git", icon: <FaGithub /> },
+      { name: "github", src: "https://github.com/kumar-rinku0/CurrencyConverterFX.git", icon: <FaGithub /> },
     ]
   },
   {
@@ -70,7 +71,24 @@ const projects = [
       { name: "ts", icon: <SiTypescript /> },
     ],
     link: [
-      { name: "github", src: "/https://github.com/kumar-rinku0/CurrencyConverterFX.git", icon: <FaGithub /> },
+      { name: "github", src: "https://github.com/kumar-rinku0/", icon: <FaGithub /> },
+    ]
+  },
+  {
+    num: "05",
+    categroy: "Portfolio Website",
+    title: "rinku's portfolio",
+    description: "Responsive and well designed full stack application.",
+    image: "/img/5.png",
+    stack: [
+      { name: "nextjs", icon: <SiNextdotjs /> },
+      { name: "tailwind", icon: <SiTailwindcss /> },
+      { name: "ts", icon: <SiTypescript /> },
+      { name: "frammer", icon: <SiFramer /> },
+    ],
+    link: [
+      { name: "github", src: "https://github.com/kumar-rinku0/rinku-portfolio.git", icon: <FaGithub /> },
+      { name: "host", src: "https://rinku-portfolio-one.vercel.app/", icon: <IoMdPaperPlane /> },
     ]
   },
 ]
@@ -127,7 +145,7 @@ const Work = () => {
                 {project.link.map((item, index) => {
                   return (
                     <div key={index} className="w-14 h-14 rounded-full border border-accent flex justify-center items-center hover:text-primary hover:bg-accent cursor-pointer">
-                      <Link href={item.src} className="text-3xl">
+                      <Link href={item.src} className="text-2xl">
                         {item.icon}
                       </Link>
                     </div>
