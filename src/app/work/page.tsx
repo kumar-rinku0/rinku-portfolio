@@ -96,7 +96,7 @@ const projects = [
         link: [
             {
                 name: "github",
-                src: "https://github.com/kumar-rinku0/",
+                src: "https://github.com/kumar-rinku0/login-signup-system.git",
                 icon: <FaGithub />,
             },
         ],
@@ -135,7 +135,7 @@ const projects = [
         link: [
             {
                 name: "github",
-                src: "https://github.com/kumar-rinku0/",
+                src: "https://github.com/kumar-rinku0/project-04.git",
                 icon: <FaGithub />,
             },
         ],
