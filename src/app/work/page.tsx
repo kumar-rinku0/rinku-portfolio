@@ -210,7 +210,7 @@ const Work = () => {
                                 {project.description}
                             </p>
                             {/* {project icons or tech names} */}
-                            <ul className="flex gap-4">
+                            <ul className="flex flex-wrap gap-4">
                                 {project.stack.map((item, index) => {
                                     return (
                                         <li
@@ -248,7 +248,7 @@ const Work = () => {
                     </div>
                     <div className="w-full xl:w-[60%] order-1 xl:order-none">
                         <div className="xl:h-[520px] mb-12">
-                            <div className="h-[300px] sm:h-[460px] lg:h-[560px] xl:h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                            <div className="h-[260px] sm:h-[460px] lg:h-[560px] xl:h-[460px] relative group flex justify-center items-center bg-pink-50/20">
                                 {/* {overlap} */}
                                 <div className="absolute top-0 bottom-0 h-full w-full bg-black/10"></div>
                                 {/* {img} */}
