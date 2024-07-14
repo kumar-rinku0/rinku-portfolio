@@ -191,9 +191,9 @@ const Work = () => {
             }}
             className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0"
         >
-            <div className="container mx-auto">
+            <div className="container">
                 <div className="flex flex-col xl:flex-row xl:gap-8">
-                    <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
+                    <div className="w-full xl:w-[40%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
                         <div className="flex flex-col gap-6">
                             {/* {project number} */}
                             <div className="text-8xl leading-none text-transparent text-outline font-extrabold">
@@ -248,7 +248,7 @@ const Work = () => {
                     </div>
                     <div className="w-full xl:w-[60%] order-1 xl:order-none">
                         <div className="xl:h-[520px] mb-12">
-                            <div className="h-[260px] sm:h-96 lg:h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                            <div className="h-[300px] sm:h-[460px] lg:h-[560px] xl:h-[460px] relative group flex justify-center items-center bg-pink-50/20">
                                 {/* {overlap} */}
                                 <div className="absolute top-0 bottom-0 h-full w-full bg-black/10"></div>
                                 {/* {img} */}
