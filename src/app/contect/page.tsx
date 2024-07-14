@@ -19,7 +19,7 @@ const info = [
   {
     name: "email",
     icon: <MdAlternateEmail />,
-    value: "officialkumar.rinku@gmail.com",
+    value: "kumar.rinku0@outlook.com",
   },
   {
     name: "address",

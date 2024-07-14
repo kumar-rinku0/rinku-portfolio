@@ -1,17 +1,13 @@
 "use client";
 
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "@/components/ui/tooltip";
 import { motion } from "framer-motion"
-import { Divide } from "lucide-react";
 import { FaHtml5, FaJava, FaReact, FaJs } from "react-icons/fa"
 import { SiTailwindcss, SiNextdotjs, SiReact, SiCplusplus, SiMongoose, SiNodedotjs } from "react-icons/si"
 
 
 
 const experience = {
-  icon: "",
   title: "My Experience",
   description: "I am a fresher software developer and don't have much experience, but I have developed several projects and applications.",
   items: [
@@ -24,7 +20,6 @@ const experience = {
 }
 
 const education = {
-  icon: "",
   title: "My Education",
   description: "I have finished an alpha course at Apna College and computer engineering at Ciitm College in Jaipur.",
   items: [
@@ -94,7 +89,7 @@ const about = {
     },
     {
       fieldname: "Email",
-      fieldvalue: "officialkumar.rinku@gmail.com"
+      fieldvalue: "kumar.rinku0@outlook.com"
     },
     {
       fieldname: "Nationality",

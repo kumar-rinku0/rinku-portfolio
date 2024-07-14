@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export default function Home() {
     return (
-        <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
+        <section className="min-h-[80vh] flex flex-col justify-center py-4 xl:py-0">
             <div className="container h-full mx-auto">
                 <div className="flex flex-col xl:flex-row items-center justify-evenly xl:justify-between xl:pt-8 xl:pb-16">
                     {/* text  */}
