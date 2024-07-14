@@ -42,7 +42,7 @@ const Services = () => {
           opacity:1,
           transition:{delay:2.4, duration:2, ease:"easeIn"}
         }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-16"
+        className="grid grid-cols-1 xl:grid-cols-2 gap-16"
         >
           {services.map((service, index) => {
             return (
