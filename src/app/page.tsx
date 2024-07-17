@@ -30,7 +30,7 @@ export default function Home() {
                         />
                         {/* buttons and socials */}
                         <div className="flex flex-col xl:flex-row items-center gap-8">
-                            <Link href={"/rinku-kumar-resume.pdf"}>
+                            <Link href={"/rinku-kumar-resume.pdf"} prefetch={false} scroll={false} replace={false} target="_blank">
                                 <Button
                                     variant={"outline"}
                                     size={"lg"}
