@@ -1,3 +1,5 @@
+"use client";
+
 import { FiDownload } from "react-icons/fi"
 
 // components
@@ -6,10 +8,12 @@ import Socials from "@/components/Socials";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 import Link from "next/link";
-
+import AnimatedText from "@/components/AnimatedText";
+import { useRef } from "react";
 
 
 export default function Home() {
+    const ref = useRef(null);
     return (
         <section className="min-h-[80vh] flex flex-col justify-center py-4 xl:py-0">
             <div className="container h-full mx-auto">
@@ -20,9 +24,14 @@ export default function Home() {
                         <h1 className="h1">
                             Hello I&apos;m <br /> <span className="text-accent">Rinku Kumar</span>
                         </h1>
-                        <p className="max-w-[500px] mb-8 text-white/60">
-                            I excel at crafting elegent digital expriences and i am proficient in various programming languages and technologies.
-                        </p>
+                        {/* <AnimatedText text={"Hello I'm Rinku Kumar"} el="h1"/> */}
+                        <AnimatedText 
+                            el="p"
+                            className="max-w-[500px] mb-8 text-white/60"
+                            text="I excel at crafting elegent digital expriences and i am proficient in various programming languages and technologies."
+                            // animation={{hidden:{opacity:0}, visible:{opacity:1, transition: { staggerChildren: 0.1}}}}
+                            repeatDelay={15000}
+                        />
                         {/* buttons and socials */}
                         <div className="flex flex-col xl:flex-row items-center gap-8">
                             <Link href={"/rinku_kumar_resume.pdf"}>
