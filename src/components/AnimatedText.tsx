@@ -19,7 +19,7 @@ type AnimatedTextProps = {
 const defaultAnimations = {
     hidden: {
         opacity: 0,
-        y:  20,
+        y: 20,
     },
     visible: {
         opacity: 1,
@@ -45,8 +45,8 @@ export const AnimatedText = ({
     const isInView = useInView(ref, { amount: 0.5, once });
 
     useEffect(() => {
-      let timeout: NodeJS.Timeout;
-        setTimeout(() => {
+        let timeout: NodeJS.Timeout;
+        timeout = setTimeout(() => {
             const show = () => {
                 controls.start("visible");
                 if (repeatDelay) {
@@ -64,7 +64,7 @@ export const AnimatedText = ({
             }
         }, startDelay);
         return () => clearTimeout(timeout);
-    }, [isInView]);
+    }, [isInView, startDelay, repeatDelay, controls]);
 
     return (
         <Wrapper className={className}>

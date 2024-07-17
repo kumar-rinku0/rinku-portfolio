@@ -21,18 +21,16 @@ export default function Home() {
                         <h1 className="h1">
                             Hello I&apos;m <br /> <span className="text-accent">Rinku Kumar</span>
                         </h1>
-                        {/* <AnimatedText text={"Hello I'm Rinku Kumar"} el="h1"/> */}
                         <AnimatedText 
                             el="p"
                             className="max-w-[500px] mb-8 text-white/60"
                             text="I excel at crafting elegent digital expriences and i am proficient in various programming languages and technologies."
-                            // animation={{hidden:{opacity:0}, visible:{opacity:1, transition: { staggerChildren: 0.1}}}}
                             repeatDelay={15000}
                             startDelay={3000}
                         />
                         {/* buttons and socials */}
                         <div className="flex flex-col xl:flex-row items-center gap-8">
-                            <Link href={"/rinku_kumar_resume.pdf"}>
+                            <Link href={"/rinku-kumar-resume.pdf"}>
                                 <Button
                                     variant={"outline"}
                                     size={"lg"}
