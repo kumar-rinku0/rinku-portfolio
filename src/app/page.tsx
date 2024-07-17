@@ -28,6 +28,7 @@ export default function Home() {
                             text="I excel at crafting elegent digital expriences and i am proficient in various programming languages and technologies."
                             // animation={{hidden:{opacity:0}, visible:{opacity:1, transition: { staggerChildren: 0.1}}}}
                             repeatDelay={15000}
+                            startDelay={3000}
                         />
                         {/* buttons and socials */}
                         <div className="flex flex-col xl:flex-row items-center gap-8">

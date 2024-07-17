@@ -9,6 +9,7 @@ type AnimatedTextProps = {
     className?: string;
     once?: boolean;
     repeatDelay?: number;
+    startDelay?: number;
     animation?: {
         hidden: Variant;
         visible: Variant;
@@ -35,6 +36,7 @@ export const AnimatedText = ({
     className,
     once,
     repeatDelay,
+    startDelay,
     animation = defaultAnimations,
 }: AnimatedTextProps) => {
     const controls = useAnimation();
@@ -60,7 +62,7 @@ export const AnimatedText = ({
             } else {
                 controls.start("hidden");
             }
-        }, 3000);
+        }, startDelay);
         return () => clearTimeout(timeout);
     }, [isInView]);
 
