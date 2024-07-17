@@ -1,5 +1,3 @@
-"use client";
-
 import { FiDownload } from "react-icons/fi"
 
 // components
@@ -9,11 +7,10 @@ import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 import Link from "next/link";
 import AnimatedText from "@/components/AnimatedText";
-import { useRef } from "react";
+
 
 
 export default function Home() {
-    const ref = useRef(null);
     return (
         <section className="min-h-[80vh] flex flex-col justify-center py-4 xl:py-0">
             <div className="container h-full mx-auto">
