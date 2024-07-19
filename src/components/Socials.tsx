@@ -30,6 +30,10 @@ const Socials = ({containerStyle, iconStyle} : any) => {
                     href={social.path} 
                     key={index}
                     className={iconStyle}
+                    prefetch={false}
+                    scroll={false}
+                    replace={false}
+                    target="_blank"
                 >{social.icon}
                 </Link>);
         })}
