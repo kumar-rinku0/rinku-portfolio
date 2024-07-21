@@ -1,4 +1,4 @@
-import { FiDownload } from "react-icons/fi"
+import { FiDownload } from "react-icons/fi";
 
 // components
 import { Button } from "@/components/ui/button";
@@ -7,8 +7,6 @@ import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 import Link from "next/link";
 import AnimatedText from "@/components/AnimatedText";
-
-
 
 export default function Home() {
     return (
@@ -19,9 +17,10 @@ export default function Home() {
                     <div className="text-center xl:text-left order-2 xl:order-none">
                         <span>Software Developer</span>
                         <h1 className="h1">
-                            Hello I&apos;m <br /> <span className="text-accent">Rinku Kumar</span>
+                            Hello I&apos;m <br />{" "}
+                            <span className="text-accent">Rinku Kumar</span>
                         </h1>
-                        <AnimatedText 
+                        <AnimatedText
                             el="p"
                             className="max-w-[500px] mb-8 text-white/60"
                             text="I excel at crafting elegent digital expriences and i am proficient in various programming languages and technologies."
@@ -30,7 +29,13 @@ export default function Home() {
                         />
                         {/* buttons and socials */}
                         <div className="flex flex-col xl:flex-row items-center gap-8">
-                            <Link href={"/rinku-kumar-resume.pdf"} prefetch={false} scroll={false} replace={false} target="_blank">
+                            <Link
+                                href={"/rinku-kumar-resume.pdf"}
+                                prefetch={false}
+                                scroll={false}
+                                replace={false}
+                                target="_blank"
+                            >
                                 <Button
                                     variant={"outline"}
                                     size={"lg"}
@@ -59,5 +64,3 @@ export default function Home() {
         </section>
     );
 }
-
-

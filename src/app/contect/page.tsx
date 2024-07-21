@@ -106,11 +106,6 @@ const Contect = () => {
 
     return (
         <motion.div
-            initial={{ opacity: 0 }}
-            animate={{
-                opacity: 1,
-                transition: { duration: 0.4, delay: 2.4, ease: "easeIn" },
-            }}
         >
             {alert === true ? (
                 <Alert

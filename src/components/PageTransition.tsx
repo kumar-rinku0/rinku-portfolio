@@ -3,23 +3,33 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
-const PageTransition = ({children} : any) => {
-    const pathname = usePathname();
-    return (
-        <AnimatePresence>
-            <div key={pathname}>
-                <motion.div 
-                initial={{opacity:1}} 
-                animate={{
-                    opacity:0,
-                    transition: {delay:1, duration:0.4, ease:"easeInOut"},
-                }}
-                className="h-screen w-screen fixed bg-primary top-0 pointer-events-none"
-                ></motion.div>
-                {children}
-            </div>
-        </AnimatePresence>
-    )
+const defaultAnimation = {
+    hidden : {
+        opacity: 0,
+        x: "-100vw",
+    },
+    visible : {
+        opacity: 1,
+        x: 0,
+        transition: {duration:1, type:"spring" ,ease: "easeIn" }
+    }
 }
 
-export default PageTransition
+const PageTransition = ({ children }: any) => {
+    const pathname = usePathname();
+    return (
+        <AnimatePresence mode="wait">
+            <motion.div
+                key={pathname}
+                variants={defaultAnimation}
+                initial={"hidden"}
+                animate={"visible"}
+                exit={{opacity:0, x:"100vw", transition:{duration:0.4, type:"spring",}}}
+            >
+                {children}
+            </motion.div>
+        </AnimatePresence>
+    );
+};
+
+export default PageTransition;

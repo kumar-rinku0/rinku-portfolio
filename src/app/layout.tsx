@@ -30,7 +30,7 @@ export default function RootLayout({
       <body 
         className={JetBrainsMono.variable}
         >
-          <StairTransition />
+          {/* <StairTransition /> */}
           <Header />
           <PageTransition>
             {children } 

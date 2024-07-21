@@ -23,9 +23,6 @@ import {
     SiFramer,
 } from "react-icons/si";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
-import { Divide } from "lucide-react";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const variants = {
@@ -184,11 +181,6 @@ const Work = () => {
     };
     return (
         <motion.div
-            initial={{ opacity: 0 }}
-            animate={{
-                opacity: 1,
-                transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
-            }}
             className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0"
         >
             <div className="container">
