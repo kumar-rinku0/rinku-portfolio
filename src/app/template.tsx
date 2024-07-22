@@ -4,18 +4,18 @@ import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
 const defaultAnimation = {
-    hidden : {
+    hidden: {
         opacity: 0,
         x: "-100vw",
     },
-    visible : {
+    visible: {
         opacity: 1,
         x: 0,
-        transition: {duration:1, type:"spring" ,ease: "easeIn" }
-    }
-}
+        transition: { duration: 1, type: "spring", ease: "easeIn" },
+    },
+};
 
-const PageTransition = ({ children }: any) => {
+const Template = ({ children }: { children: React.ReactNode }) => {
     const pathname = usePathname();
     return (
         <AnimatePresence mode="wait">
@@ -24,7 +24,10 @@ const PageTransition = ({ children }: any) => {
                 variants={defaultAnimation}
                 initial={"hidden"}
                 animate={"visible"}
-                exit={{opacity:0, x:"100vw", transition:{duration:0.4, type:"spring",}}}
+                exit={{
+                    opacity: 0,
+                    x: "100vw",
+                }}
             >
                 {children}
             </motion.div>
@@ -32,4 +35,4 @@ const PageTransition = ({ children }: any) => {
     );
 };
 
-export default PageTransition;
+export default Template;
