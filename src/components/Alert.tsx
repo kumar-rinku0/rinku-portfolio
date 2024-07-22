@@ -25,21 +25,22 @@ const errorTypes = [
     },
 ];
 
-type props = {
+type AlertProps = {
     type: string;
-    containerStyle: string;
-    iconStyle: string;
-    messageStyle: string;
+    containerStyle?: string;
+    iconStyle?: string;
+    messageStyle?: string;
+    delay?: number;
 };
 
-type prop = {
+type ErrorTypeProps = {
     type: string;
     icon: React.JSX.Element;
     message: string;
 };
 
-const Alert = ({ type, containerStyle, iconStyle, messageStyle }: props) => {
-    const errorType: prop[] = errorTypes.filter((error) => error.type === type);
+const Alert = ({ type, containerStyle, iconStyle, messageStyle, delay }: AlertProps) => {
+    const errorType: ErrorTypeProps[] = errorTypes.filter((error) => error.type === type);
     return (
         <motion.div
             initial={{ opacity: 0, x: "-100vw" }}
@@ -54,7 +55,7 @@ const Alert = ({ type, containerStyle, iconStyle, messageStyle }: props) => {
                 transition: {
                     duration: 1,
                     type: "spring",
-                    delay: 1,
+                    delay: delay || 0,
                     ease: "easeOut",
                 },
             }}

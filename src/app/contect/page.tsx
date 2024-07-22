@@ -111,7 +111,7 @@ const Contect = () => {
                         type={typeAlert}
                         containerStyle="h-8 flex gap-4 justify-center items-center"
                         iconStyle="text-4xl"
-                        messageStyle=""
+                        delay={1}
                     />
                 )}
             </AnimatePresence>
