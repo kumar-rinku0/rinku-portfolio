@@ -3,8 +3,7 @@
 import Alert from "@/components/Alert";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
-import { Divide } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { FormEvent } from "react";
 import { FaPhone, FaLocationCrosshairs } from "react-icons/fa6";
@@ -105,19 +104,18 @@ const Contect = () => {
     }
 
     return (
-        <motion.div
-        >
-            {alert === true ? (
-                <Alert
-                    type={typeAlert}
-                    containerStyle="h-8 flex gap-4 justify-center items-center"
-                    iconStyle="text-4xl"
-                    messageStyle=""
-                />
-            ) : (
-                <div className="h-8 hideen"></div>
-            )}
-            <div className="container mx-auto flex flex-col xl:flex-row justify-evenly items-center h-[80vh] w-full py-8 xl:py-0 ">
+        <motion.div className="h-full w-full">
+            <AnimatePresence mode="wait">
+                {alert && (
+                    <Alert
+                        type={typeAlert}
+                        containerStyle="h-8 flex gap-4 justify-center items-center"
+                        iconStyle="text-4xl"
+                        messageStyle=""
+                    />
+                )}
+            </AnimatePresence>
+            <div className="container mx-auto flex flex-col xl:flex-row justify-evenly items-center h-full xl:h-[80vh] w-full pt-16 xl:pt-0 ">
                 <div className="order-2 xl:order-none mx-4 xl:mx-0 max-w-full xl:max-w-[50%] my-8 xl:my-0">
                     <div className="h-full w-full bg-white/5 p-8 rounded-md">
                         <div className="py-8">

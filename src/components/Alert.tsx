@@ -42,20 +42,25 @@ const Alert = ({ type, containerStyle, iconStyle, messageStyle }: props) => {
     const errorType: prop[] = errorTypes.filter((error) => error.type === type);
     return (
         <motion.div
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0, x: "-100vw" }}
             animate={{
                 opacity: 1,
-                transition: { duration: 1, delay: 0, ease: "easeIn" },
+                x: 0,
+                transition: { duration: 1, type: "spring", ease: "easeIn" },
             }}
+            exit={{
+                opacity: 0,
+                x: "100vw",
+                transition: {
+                    duration: 1,
+                    type: "spring",
+                    delay: 1,
+                    ease: "easeOut",
+                },
+            }}
+            className="top-0 left-0 right-0 fixed"
         >
-            <motion.div
-                initial={{ opacity: 1 }}
-                animate={{
-                    opacity: 0,
-                    transition: { duration: 1, delay: 2, ease: "easeOut" },
-                }}
-                className={containerStyle}
-            >
+            <div className={containerStyle}>
                 {errorType.map((item, index) => {
                     return (
                         <div
@@ -69,7 +74,7 @@ const Alert = ({ type, containerStyle, iconStyle, messageStyle }: props) => {
                         </div>
                     );
                 })}
-            </motion.div>
+            </div>
         </motion.div>
     );
 };
