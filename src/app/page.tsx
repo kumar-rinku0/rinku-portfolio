@@ -25,7 +25,7 @@ export default function Home() {
                             className="max-w-[500px] mb-8 text-white/60"
                             text="I excel at crafting elegent digital expriences and i am proficient in various programming languages and technologies."
                             repeatDelay={15000}
-                            startDelay={2000}
+                            startDelay={1500}
                         />
                         {/* buttons and socials */}
                         <div className="flex flex-col xl:flex-row items-center gap-8">

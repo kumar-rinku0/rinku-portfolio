@@ -12,7 +12,7 @@ const Photo = () => {
       animate={{
         opacity: 1,
         scale: 1,
-        transition:{type:"spring", stiffness:120, damping:10, delay:1.4, duration:0.4, ease:"easeIn"}
+        transition:{type:"spring", stiffness:120, damping:10, delay:1, duration:0.4, ease:"easeIn"}
       }}
       >
         <div className="h-[298px] w-[298px] xl:h-[498px] xl:w-[498px] relative">
