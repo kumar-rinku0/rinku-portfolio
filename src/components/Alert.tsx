@@ -1,11 +1,11 @@
 import React, { ReactElement } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { FaCheckCircle, FaExclamationTriangle } from "react-icons/fa";
+import { FaCheckCircle, FaExclamationTriangle, FaExclamationCircle } from "react-icons/fa";
 
 const errorTypes = [
     {
         type: "error",
-        icon: <FaExclamationTriangle className="text-red-500" />,
+        icon: <FaExclamationCircle className="text-red-500" />,
         message: "fill out the details.",
     },
     {
@@ -22,6 +22,11 @@ const errorTypes = [
         type: "server2",
         icon: <FaExclamationTriangle className="text-red-500" />,
         message: "phone no already exist.",
+    },
+    {
+        type: "server3",
+        icon: <FaExclamationTriangle className="text-yellow-500" />,
+        message: "server error!!",
     },
 ];
 

@@ -1,10 +1,9 @@
 "use client";
 
 import Alert from "@/components/Alert";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
-import { useRouter } from "next/navigation";
 import { FormEvent } from "react";
 import { FaPhone, FaLocationCrosshairs } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
@@ -28,10 +27,22 @@ const info = [
 ];
 
 const Contect = () => {
-    const router = useRouter();
     const contentType = "application/json";
     const [typeAlert, setTypeAlert] = useState("success");
     const [alert, setAlert] = useState(false);
+
+    useEffect(() => {
+        let timeout: NodeJS.Timeout;
+        if (alert) {
+            timeout = setTimeout(() => {
+                setAlert(false);
+            }, 3000);
+        }
+
+        return () => {
+            clearTimeout(timeout);
+        };
+    }, [alert]);
 
     const formValidate = (event: FormEvent<HTMLFormElement>) => {
         const formData = new FormData(event.currentTarget);
@@ -77,29 +88,26 @@ const Contect = () => {
                 const data = await response.json();
                 console.log(data);
                 if (data.success === false) {
-                    if (data.error.keyValue.email) {
+                    if (data.error?.keyValue?.email) {
                         setTypeAlert("server1");
-                    } else {
+                        setAlert(true);
+                    } else if (data.error?.keyValue?.phoneno) {
                         setTypeAlert("server2");
+                        setAlert(true);
+                    } else {
+                        setTypeAlert("server3");
+                        setAlert(true);
                     }
                 } else {
                     setTypeAlert("success");
+                    setAlert(true);
                 }
-
-                setAlert(true);
-                setTimeout(() => {
-                    setAlert(false);
-                }, 3000);
             } catch (error) {
                 console.error(error);
             }
         } else if (err > 0) {
             setTypeAlert("error");
             setAlert(true);
-            setTimeout(() => {
-                setAlert(false);
-                setTypeAlert("success");
-            }, 3000);
         }
     }
 

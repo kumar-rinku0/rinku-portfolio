@@ -27,19 +27,22 @@ const config: Config = {
                 hover: "#00e187",
             },
             white: "#ffffff",
-            transparent: 'transparent',
-            current: 'currentColor',
+            transparent: "transparent",
+            current: "currentColor",
             indigo: {
-              400: "#818cf8",
+                400: "#818cf8",
             },
             gray: {
-              400: "#9ca3af",
-              500: "#6b7280",
-              800: "#1f2937"
+                400: "#9ca3af",
+                500: "#6b7280",
+                800: "#1f2937",
             },
             red: {
-              500: "#ef4444"
-            }
+                500: "#ef4444",
+            },
+            yellow: {
+                500: "#eab308",
+            },
         },
         extend: {
             backgroundImage: {
