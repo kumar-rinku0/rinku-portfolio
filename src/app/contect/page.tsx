@@ -123,7 +123,7 @@ const Contect = () => {
                     />
                 )}
             </AnimatePresence>
-            <div className="container mx-auto flex flex-col xl:flex-row justify-start xl:justify-evenly items-center h-[90vh] xl:h-[80vh] w-full pt-16 xl:pt-0 ">
+            <div className="container mx-auto flex flex-col xl:flex-row justify-start sm:justify-evenly items-center h-[90vh] xl:h-[80vh] w-full pt-16 xl:pt-0 ">
                 <div className="order-2 xl:order-none mx-4 xl:mx-0 max-w-full xl:max-w-[50%] my-8 xl:my-0">
                     <div className="h-full w-full bg-white/5 p-8 rounded-md">
                         <div className="py-8">
