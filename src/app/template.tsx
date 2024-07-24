@@ -11,7 +11,7 @@ const defaultAnimation = {
     visible: {
         opacity: 1,
         x: 0,
-        transition: { duration: 1, type: "spring", ease: "easeIn" },
+        transition: { duration: 0.4, ease: "easeIn" },
     },
 };
 
