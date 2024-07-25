@@ -5,7 +5,6 @@ import {
     FaExclamationTriangle,
     FaExclamationCircle,
 } from "react-icons/fa";
-import { Duru_Sans } from "next/font/google";
 
 const errorTypes = [
     {
