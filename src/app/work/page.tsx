@@ -80,20 +80,20 @@ const projects = [
     {
         num: "02",
         categroy: "MERN application",
-        title: "Blogs At All",
+        title: "Blogify!",
         description:
             "With this blog software, you can read and leave comments on other people's blogs in addition to writing your own and tagging your friends in them.",
         image: "/img/3.png",
         stack: [
-            { name: "ejs", icon: <SiEjs /> },
             { name: "node", icon: <FaNodeJs /> },
             { name: "mongoose", icon: <SiMongoose /> },
             { name: "express", icon: <SiExpress /> },
+            { name: "ejs", icon: <SiEjs /> },
         ],
         link: [
             {
                 name: "github",
-                src: "https://github.com/kumar-rinku0/login-signup-system.git",
+                src: "https://github.com/kumar-rinku0/project-02.git",
                 icon: <FaGithub />,
             },
         ],
