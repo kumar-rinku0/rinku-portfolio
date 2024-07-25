@@ -40,17 +40,14 @@ const config: Config = {
             red: {
                 500: "#ef4444",
             },
+            pink: {
+                50: "#fdf2f8",
+            },
             yellow: {
                 500: "#eab308",
             },
         },
-        extend: {
-            backgroundImage: {
-                "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-                "gradient-conic":
-                    "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-            },
-        },
+        extend: {},
     },
     plugins: [],
 };
