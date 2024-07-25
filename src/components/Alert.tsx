@@ -1,6 +1,11 @@
 import React, { ReactElement } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { FaCheckCircle, FaExclamationTriangle, FaExclamationCircle } from "react-icons/fa";
+import { motion } from "framer-motion";
+import {
+    FaCheckCircle,
+    FaExclamationTriangle,
+    FaExclamationCircle,
+} from "react-icons/fa";
+import { Duru_Sans } from "next/font/google";
 
 const errorTypes = [
     {
@@ -44,25 +49,41 @@ type ErrorTypeProps = {
     message: string;
 };
 
-const Alert = ({ type, containerStyle, iconStyle, messageStyle, delay }: AlertProps) => {
-    const errorType: ErrorTypeProps[] = errorTypes.filter((error) => error.type === type);
+const alertAnimation = {
+    hidden: {
+        opacity: 0,
+        x: "-80vw",
+    },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            duration: 1,
+            type: "spring",
+            ease: "easeIn",
+        },
+    },
+};
+
+const Alert = ({
+    type,
+    containerStyle,
+    iconStyle,
+    messageStyle,
+    delay,
+}: AlertProps) => {
+    const errorType: ErrorTypeProps[] = errorTypes.filter(
+        (error) => error.type === type
+    );
     return (
         <motion.div
-            initial={{ opacity: 0, x: "-100vw" }}
-            animate={{
-                opacity: 1,
-                x: 0,
-                transition: { duration: 1, type: "spring", ease: "easeIn" },
-            }}
+            variants={alertAnimation}
+            initial="hidden"
+            animate="visible"
             exit={{
                 opacity: 0,
-                x: "100vw",
-                transition: {
-                    duration: 1,
-                    type: "spring",
-                    delay: delay || 0,
-                    ease: "easeOut",
-                },
+                x: "80vw",
+                transition: { delay: delay || 0, type: "spring", duration: 1 },
             }}
             className="top-0 left-0 right-0 fixed"
         >

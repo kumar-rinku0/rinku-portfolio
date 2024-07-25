@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FormEvent } from "react";
 import { FaPhone, FaLocationCrosshairs } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
+import { useRouter } from "next/navigation";
 
 const info = [
     {
@@ -30,19 +31,19 @@ const Contect = () => {
     const contentType = "application/json";
     const [typeAlert, setTypeAlert] = useState("success");
     const [alert, setAlert] = useState(false);
-
+    const router = useRouter();
     useEffect(() => {
         let timeout: NodeJS.Timeout;
         if (alert) {
             timeout = setTimeout(() => {
                 setAlert(false);
-            }, 3000);
+                if (typeAlert === "success") {
+                    router.push("/");
+                }
+            }, 2000);
         }
-
-        return () => {
-            clearTimeout(timeout);
-        };
-    }, [alert]);
+        return () => {};
+    }, [alert, typeAlert, router]);
 
     const formValidate = (event: FormEvent<HTMLFormElement>) => {
         const formData = new FormData(event.currentTarget);
@@ -113,7 +114,7 @@ const Contect = () => {
 
     return (
         <motion.div className="h-full w-full">
-            <AnimatePresence mode="wait">
+            <AnimatePresence>
                 {alert && (
                     <Alert
                         type={typeAlert}
