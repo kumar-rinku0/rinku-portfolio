@@ -3,7 +3,7 @@
 import Alert from "@/components/Alert";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { FormEvent } from "react";
 import { FaPhone, FaLocationCrosshairs } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
@@ -113,7 +113,7 @@ const Contect = () => {
     }
 
     return (
-        <motion.div className="h-full w-full">
+        <div className="h-full w-full">
             <AnimatePresence>
                 {alert && (
                     <Alert
@@ -124,7 +124,7 @@ const Contect = () => {
                     />
                 )}
             </AnimatePresence>
-            <div className="container mx-auto flex flex-col xl:flex-row justify-start sm:justify-evenly items-center h-[90vh] xl:h-[80vh] w-full pt-16 xl:pt-0 ">
+            <div className="container mx-auto flex flex-col xl:flex-row justify-start sm:justify-evenly xl:justify-around items-center h-[90vh] xl:h-[80vh] w-full pt-16 xl:pt-0 ">
                 <div className="order-2 xl:order-none mx-4 xl:mx-0 max-w-full xl:max-w-[50%] my-8 xl:my-0">
                     <div className="h-full w-full bg-white/5 p-8 rounded-md">
                         <div className="py-8">
@@ -204,7 +204,7 @@ const Contect = () => {
                     </ul>
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 };
 

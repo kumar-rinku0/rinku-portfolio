@@ -1,7 +1,5 @@
-"use client";
-
+import Balls from "@/components/Balls";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { motion } from "framer-motion";
 import { FaHtml5, FaJava, FaReact, FaJs } from "react-icons/fa";
 import {
     SiTailwindcss,
@@ -113,7 +111,7 @@ const about = {
 
 const Resume = () => {
     return (
-        <motion.div
+        <div
             className="min-h-[80vh] flex justify-center items-center py-12 xl:py-0"
         >
             <div className="container mx-auto max-w-[1080px]">
@@ -205,18 +203,7 @@ const Resume = () => {
                                                 key={index}
                                                 className="w-full h-full flex items-center justify-center gap-8 mt-16"
                                             >
-                                                <motion.div
-                                                    drag
-                                                    dragElastic={0.5}
-                                                    dragConstraints={{left:0, right:0, top:0, bottom:0}}
-                                                    whileDrag={{scaleX:1.2}}
-                                                    dragMomentum={false}
-                                                    dragTransition={{bounceStiffness: 600, bounceDamping: 10}}
-                                                    title={value.name}
-                                                    className="w-20 h-20 flex justify-center items-center rounded-full bg-gray-800 text-accent "
-                                                >
-                                                    {value.icon}
-                                                </motion.div>
+                                                <Balls title={value.name} icon={value.icon}/>
                                             </div>
                                         );
                                     })}
@@ -247,7 +234,7 @@ const Resume = () => {
                     </div>
                 </Tabs>
             </div>
-        </motion.div>
+        </div>
     );
 };
 
