@@ -291,6 +291,8 @@ const Work = () => {
                                             className="w-full h-full object-cover selection:not-sr-only"
                                             src={project.image}
                                             alt=""
+                                            loading="lazy"
+                                            fetchPriority="high"
                                         />
                                         <button
                                             className="text-accent absolute top-[50%] -translate-x-0 translate-y-[-50%] left-0 p-2 focus-visible:outline-none"

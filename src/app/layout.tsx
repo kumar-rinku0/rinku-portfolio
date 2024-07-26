@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono} from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react"
 
 // components
 import Header from "@/components/Header";
@@ -26,11 +27,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body 
-        className={JetBrainsMono.variable}
+        className={`${JetBrainsMono.variable} antialiased`}
         >
           <Header />
           <main>
-            {children } 
+            { children }
+            <Analytics />
           </main>
       </body>
     </html>
