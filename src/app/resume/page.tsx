@@ -28,7 +28,7 @@ const experience = {
 const education = {
   title: "My Education",
   description:
-    "I have finished an alpha course at Apna College and computer engineering at Ciitm College in Jaipur.",
+    "I have finished an alpha course at Apna College and computer engineering at CIITM College in Jaipur.",
   items: [
     {
       institute: "Apna College",
@@ -113,14 +113,14 @@ const about = {
 
 const Resume = () => {
   return (
-    <div className="min-h-[80vh] flex justify-center items-center py-12 xl:py-0">
-      <div className="container max-w-[1080px]">
+    <div className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
+      <div className="container">
         <Tabs
           defaultValue="experience"
           className="flex flex-col justify-center items-center gap-16"
         >
           <div className="w-full flex justify-start">
-            <TabsList className="container px-1 flex">
+            <TabsList className="container">
               <TabsTrigger value="experience">
                 <span className="hidden sm:block"> Experience </span>
                 <span className="block sm:hidden">
@@ -151,14 +151,14 @@ const Resume = () => {
               </TabsTrigger>
             </TabsList>
           </div>
-          <div className="container mx-auto lg:max-w-[860px] xl:max-w-none min-h-[70vh]">
+          <div className="container mx-auto lg:max-w-[860px] xl:max-w-none min-h-[60vh]">
             <TabsContent
               value="experience"
               className="w-full xl:min-w-[1080px]"
             >
               <div>
                 <h3 className="mb-4">{experience.title}</h3>
-                <p className="text-sm text-white/50">
+                <p className="text-base leading-relaxed text-white/50">
                   {experience.description}
                 </p>
                 <ul className="max-h-[60vh] w-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-16">
@@ -180,7 +180,7 @@ const Resume = () => {
             <TabsContent value="education" className="w-full xl:min-w-[1080px]">
               <div>
                 <h3 className="mb-4">{education.title}</h3>
-                <p className="text-sm text-white/50">{education.description}</p>
+                <p className="text-base leading-relaxed text-white/50">{education.description}</p>
                 <ul className="max-h-[60vh] w-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-16">
                   {education.items.map((value, index) => {
                     return (
@@ -200,13 +200,13 @@ const Resume = () => {
             <TabsContent value="skills" className="w-full xl:min-w-[1080px]">
               <div>
                 <h3 className="mb-4">{skill.title}</h3>
-                <p className="text-sm text-white/50">{skill.description}</p>
+                <p className="text-base leading-relaxed text-white/50">{skill.description}</p>
                 <div className="max-h-[60vh] grid grid-cols-3 md:grid-cols-4">
                   {skill.items.map((value, index) => {
                     return (
                       <div
                         key={index}
-                        className="w-full h-full flex items-center justify-center gap-8 mt-16"
+                        className="w-full h-full flex items-center justify-center gap-8 mt-8"
                       >
                         <Balls title={value.name} icon={value.icon} />
                       </div>
@@ -218,7 +218,7 @@ const Resume = () => {
             <TabsContent value="about" className="w-full xl:min-w-[1080px]">
               <div>
                 <h3 className="mb-4">{about.title}</h3>
-                <p className="text-sm text-white/50">{about.description}</p>
+                <p className="text-base leading-relaxed text-white/50">{about.description}</p>
                 <div className="flex flex-col justify-center items-start mt-16">
                   {about.info.map((value, index) => {
                     return (
