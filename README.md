@@ -41,7 +41,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Database
 
-Create a ``` .env ``` or ``` .env.local ``` file to declare an Environment Variable for deployment.
+Create a ``` .env ``` or ``` .env.local ``` file to declare an Environment Variable.
 
 
 
