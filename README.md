@@ -2,15 +2,15 @@
 
 # My Portfolio ✨
 
--Framework: [Next.js](https://nextjs.org/)  - Learn about Next.js framework.
+- Framework: [Next.js](https://nextjs.org/)  - Learn about Next.js framework.
 
--Database: [mongoDB](https://www.mongodb.com/)  - MongoDB atlas.
+- Database: [mongoDB](https://www.mongodb.com/)  - MongoDB atlas.
 
--Deployment: [Vercel](https://vercel.com/docs)  - Find a plan to power your project.
+- Deployment: [Vercel](https://vercel.com/docs)  - Find a plan to power your project.
 
--Styling: [Tailwind CSS](https://tailwindcss.com/)  - Best utility-first CSS framework packed with classes.
+- Styling: [Tailwind CSS](https://tailwindcss.com/)  - Best utility-first CSS framework packed with classes.
 
--Analytics: [Vercel Analytics](https://vercel.com/docs/analytics)  - 
+- Analytics: [Vercel Analytics](https://vercel.com/docs/analytics)  - 
 
 
 
@@ -29,9 +29,9 @@ Now, you can run the development server:
 
 ```bash
 
-bun install
+npm install
 
-bun dev
+npm run dev
 
 ```
 
@@ -41,7 +41,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Database
 
-Create a ```bash .env or .env.local  ``` file to declare an Environment Variable for deployment.
+Create a ``` .env ``` or ``` .env.local ``` file to declare an Environment Variable for deployment.
 
 
 
