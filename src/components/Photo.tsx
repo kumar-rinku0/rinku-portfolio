@@ -1,16 +1,23 @@
 import Image from "next/image";
-// import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 const Photo = () => {
   return (
     <div className="w-full h-full relative mix-blend-lighten">
-      <div
-      // initial={{opacity:0, scale:0}}
-      // animate={{
-      //   opacity: 1,
-      //   scale: 1,
-      //   transition:{type:"spring", stiffness:120, damping:10, delay:1, duration:0.4, ease:"easeIn"}
-      // }}
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{
+          opacity: 1,
+          scale: 1,
+          transition: {
+            type: "spring",
+            stiffness: 120,
+            damping: 10,
+            delay: 1,
+            duration: 0.4,
+            ease: "easeIn",
+          },
+        }}
       >
         <div className="min-h-[298px] min-w-[298px] xl:h-[498px] xl:w-[498px] relative">
           <Image
@@ -32,7 +39,7 @@ const Photo = () => {
             className="block xl:hidden object-contain"
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
