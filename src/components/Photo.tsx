@@ -21,7 +21,7 @@ const Photo = () => {
           },
         }}
       >
-        <div className="min-h-[298px] min-w-[298px] xl:h-[498px] xl:w-[498px] relative">
+        <div className="min-h-[298px] min-w-[298px] h-80 w-80 xl:h-[498px] xl:w-[498px] relative">
           <Image
             src={`/luffy.png`}
             alt=""
