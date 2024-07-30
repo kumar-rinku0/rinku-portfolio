@@ -15,8 +15,9 @@ const Photo = () => {
         transition:{type:"spring", stiffness:120, damping:10, delay:1, duration:0.4, ease:"easeIn"}
       }}
       >
-        <div className="h-[298px] w-[298px] xl:h-[498px] xl:w-[498px] relative">
-          <Image src={`/luffy.png`} priority quality={100} fill alt="" sizes="auto" className="object-contain"></Image>
+        <div className="min-h-[298px] min-w-[298px] xl:h-[498px] xl:w-[498px] relative">
+          <Image src={`/luffy.png`} alt="" priority quality={100} width={498} height={498} className="hidden md:block md:object-contain" />
+          <Image src={`/luffy.png`} alt="" priority quality={100} width={298} height={298} className="block md:hidden object-contain" />
         </div>
       </motion.div>
     </motion.div>
