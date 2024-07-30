@@ -111,16 +111,14 @@ const about = {
 
 const Resume = () => {
     return (
-        <div
-            className="min-h-[80vh] flex justify-center items-center py-12 xl:py-0"
-        >
-            <div className="container mx-auto max-w-[1080px]">
+        <div className="min-h-[80vh] flex justify-center items-center py-12 xl:py-0">
+            <div className="max-w-[1080px]">
                 <Tabs
                     defaultValue="experience"
                     className="flex flex-col justify-center items-center gap-16"
                 >
-                    <div className="w-full flex justify-center md:justify-start">
-                        <TabsList className="grid grid-cols-2 md:grid-cols-4 w-fit gap-4 mx:auto">
+                    <div className="w-full flex justify-start">
+                        <TabsList className="container px-1 flex">
                             <TabsTrigger value="experience">
                                 {" "}
                                 Experience{" "}
@@ -132,10 +130,10 @@ const Resume = () => {
                             <TabsTrigger value="about"> About </TabsTrigger>
                         </TabsList>
                     </div>
-                    <div className="min-h-[70vh]">
+                    <div className="container mx-auto lg:max-w-[860px] xl:max-w-none min-h-[70vh]">
                         <TabsContent
                             value="experience"
-                            className="w-full xl:min-w-[1040px]"
+                            className="w-full xl:min-w-[1080px]"
                         >
                             <div>
                                 <h3 className="mb-4">{experience.title}</h3>
@@ -162,7 +160,7 @@ const Resume = () => {
                         </TabsContent>
                         <TabsContent
                             value="education"
-                            className="w-full xl:min-w-[1040px]"
+                            className="w-full xl:min-w-[1080px]"
                         >
                             <div>
                                 <h3 className="mb-4">{education.title}</h3>
@@ -189,7 +187,7 @@ const Resume = () => {
                         </TabsContent>
                         <TabsContent
                             value="skills"
-                            className="w-full xl:min-w-[1040px]"
+                            className="w-full xl:min-w-[1080px]"
                         >
                             <div>
                                 <h3 className="mb-4">{skill.title}</h3>
@@ -203,7 +201,10 @@ const Resume = () => {
                                                 key={index}
                                                 className="w-full h-full flex items-center justify-center gap-8 mt-16"
                                             >
-                                                <Balls title={value.name} icon={value.icon}/>
+                                                <Balls
+                                                    title={value.name}
+                                                    icon={value.icon}
+                                                />
                                             </div>
                                         );
                                     })}
@@ -212,7 +213,7 @@ const Resume = () => {
                         </TabsContent>
                         <TabsContent
                             value="about"
-                            className="w-full xl:min-w-[1040px]"
+                            className="w-full xl:min-w-[1080px]"
                         >
                             <div>
                                 <h3 className="mb-4">{about.title}</h3>

@@ -146,6 +146,7 @@ const Contect = () => {
                                     id="firstname"
                                     className="w-full bg-transparent border-b border-accent outline-none"
                                     placeholder="First Name"
+                                    autoComplete="off" 
                                 />
                                 <input
                                     type="text"
@@ -153,6 +154,7 @@ const Contect = () => {
                                     id="lastname"
                                     className="w-full bg-transparent border-b border-accent outline-none"
                                     placeholder="Last Name"
+                                    autoComplete="off" 
                                 />
                             </div>
                             <input
@@ -161,6 +163,7 @@ const Contect = () => {
                                 id="phoneno"
                                 className="w-full bg-transparent border-b border-accent outline-none"
                                 placeholder="Phone No"
+                                autoComplete="off"
                             />
                             <input
                                 type="email"
@@ -168,6 +171,7 @@ const Contect = () => {
                                 id="email"
                                 className="w-full bg-transparent border-b border-accent outline-none"
                                 placeholder="E-mail"
+                                autoComplete="off" 
                             />
                             <div className="flex justify-center">
                                 <Button
