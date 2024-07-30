@@ -4,13 +4,13 @@
 
 - Framework: [Next.js](https://nextjs.org/)  - Learn about Next.js framework.
 
-- Database: [mongoDB](https://www.mongodb.com/)  - MongoDB atlas.
+- Database: [MongoDB](https://www.mongodb.com/)  - MongoDB atlas.
 
 - Deployment: [Vercel](https://vercel.com/docs)  - Find a plan to power your project.
 
 - Styling: [Tailwind CSS](https://tailwindcss.com/)  - Best utility-first CSS framework packed with classes.
 
-- Analytics: [Vercel Analytics](https://vercel.com/docs/analytics)  - 
+- Analytics: [Vercel Analytics](https://vercel.com/docs/analytics)  - Vercel web analytics, website's visitors with new metrics like top pages, top referrers, and demographics.
 
 
 
