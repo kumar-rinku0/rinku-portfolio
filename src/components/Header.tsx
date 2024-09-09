@@ -12,7 +12,7 @@ const Header = () => {
         {/* logo */}
         <Link href="/" prefetch={false} scroll={false} replace={false}>
           <span className="text-2xl font-semibold">
-            rinku <span className="text-accent">.</span>
+            rinku&nbsp;<span className="text-accent">.</span>
           </span>
         </Link>
 

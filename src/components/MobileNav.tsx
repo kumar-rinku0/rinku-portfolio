@@ -40,7 +40,7 @@ const MobileNav = () => {
         <div className="mt-32 mb-40 text-2xl text-center font-semibold flex justify-center">
           <Link href="/" prefetch={false} scroll={false} replace={false}>
             <SheetClose>
-              rinku <span className="text-accent">.</span>
+              rinku&nbsp;<span className="text-accent">.</span>
             </SheetClose>
           </Link>
         </div>
