@@ -58,7 +58,7 @@ const projects = [
     title: "Upcoming Movies",
     description:
       "A flawlessly dynamic, responsive, and well-designed website or application, constructed using javascript code that is understandable, manageable, dependable, and efficient.",
-    image: "/img/2.png",
+    image: "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio/public/img/2.png",
     stack: [
       { name: "html", icon: <FaHtml5 /> },
       { name: "css", icon: <FaCss3 /> },
@@ -83,7 +83,7 @@ const projects = [
     title: "Blogify!",
     description:
       "With this blog software, you can read and leave comments on other people's blogs in addition to writing your own and tagging your friends in them.",
-    image: "/img/3.png",
+    image: "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio/public/img/3.png",
     stack: [
       { name: "node", icon: <FaNodeJs /> },
       { name: "mongoose", icon: <SiMongoose /> },
@@ -104,7 +104,7 @@ const projects = [
     title: "Currency Converter",
     description:
       "A desktop Java programme that allows you to select the desired money from any country. in particular making use of REST APIs and HashMap.",
-    image: "/img/4.png",
+    image: "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio/public/img/4.png",
     stack: [
       { name: "java", icon: <FaJava /> },
       { name: "css", icon: <FaCss3 /> },
@@ -123,7 +123,7 @@ const projects = [
     title: "Call Toingg",
     description:
       "Web application based on service fees that offers a good communication service.",
-    image: "/img/1.png",
+    image: "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio/public/img/1.png",
     stack: [
       { name: "nextjs", icon: <SiNextdotjs /> },
       { name: "tailwind", icon: <SiTailwindcss /> },
@@ -142,7 +142,7 @@ const projects = [
     categroy: "Portfolio Website",
     title: "My Portfolio",
     description: "Responsive and well designed full stack application.",
-    image: "/img/5.png",
+    image: "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio/public/img/5.png",
     stack: [
       { name: "nextjs", icon: <SiNextdotjs /> },
       { name: "tailwind", icon: <SiTailwindcss /> },

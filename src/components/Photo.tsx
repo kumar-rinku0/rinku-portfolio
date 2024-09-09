@@ -23,7 +23,7 @@ const Photo = () => {
       >
         <div className="min-h-[298px] min-w-[298px] h-80 w-80 xl:h-[498px] xl:w-[498px] relative">
           <Image
-            src={`/luffy.png`}
+            src={`https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio/public/luffy.png`}
             alt=""
             priority
             quality={100}
@@ -32,7 +32,7 @@ const Photo = () => {
             className="hidden xl:block xl:object-contain"
           />
           <Image
-            src={`/luffy.png`}
+            src={`https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio/public/luffy.png`}
             alt=""
             priority
             quality={100}
