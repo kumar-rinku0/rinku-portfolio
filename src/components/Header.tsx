@@ -8,10 +8,10 @@ import MobileNav from "./MobileNav"
 const Header = () => {
   return (
     <header className="py-8 xl:py-12 text-white">
-        <div className="container mx-auto flex xl:justify-evenly justify-between items-center">
+        <div className="container px-4 flex xl:justify-evenly justify-between items-center">
             {/* logo */}
             <Link href="/">
-                <h1 className="text-4xl font-semibold">rinku <span className="text-accent">.</span></h1>
+                <span className="text-2xl font-semibold">rinku <span className="text-accent">.</span></span>
             </Link>
 
             {/* desktop navbar */}

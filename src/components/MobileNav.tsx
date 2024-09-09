@@ -38,7 +38,7 @@ const MobileNav = () => {
       </SheetTrigger>
       <SheetContent>
         {/* logo */}
-        <div className="mt-32 mb-40 text-3xl text-center font-semibold flex justify-center">
+        <div className="mt-32 mb-40 text-2xl text-center font-semibold flex justify-center">
           <Link href='/'>
             <SheetClose >
               rinku <span className="text-accent">.</span>

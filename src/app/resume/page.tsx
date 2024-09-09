@@ -1,6 +1,6 @@
 import Balls from "@/components/Balls";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { FaHtml5, FaJava, FaReact, FaJs, FaAward, FaCode, FaUserTie, } from "react-icons/fa";
+import { FaHtml5, FaJava, FaReact, FaJs, FaAward, FaCode, FaUserTie, FaCss3Alt } from "react-icons/fa";
 import { FaGraduationCap } from "react-icons/fa6";
 import {
   SiTailwindcss,
@@ -9,6 +9,8 @@ import {
   SiCplusplus,
   SiMongoose,
   SiNodedotjs,
+  SiExpress,
+  SiMongodb
 } from "react-icons/si";
 import { RiUserHeartFill  } from "react-icons/ri";
 
@@ -50,36 +52,49 @@ const skill = {
   items: [
     {
       icon: <FaHtml5 className="text-5xl" />,
-      name: "html",
+      name: "html 5",
     },
     {
-      icon: <FaJava className="text-5xl" />,
-      name: "java",
-    },
-    {
-      icon: <FaReact className="text-5xl" />,
-      name: "react",
-    },
-    {
-      icon: <SiTailwindcss className="text-5xl" />,
-      name: "tailwind css",
-    },
-    {
-      icon: <SiNextdotjs className="text-5xl" />,
-      name: "next js",
-    },
-    {
-      icon: <SiCplusplus className="text-5xl" />,
-      name: "c++",
+      icon: <FaCss3Alt className="text-5xl" />,
+      name: "css 3",
     },
     {
       icon: <FaJs className="text-5xl" />,
       name: "javascript",
     },
     {
+      icon: <SiNextdotjs className="text-5xl" />,
+      name: "next js",
+    },
+    {
+      icon: <SiMongodb className="text-5xl" />,
+      name: "mongodb",
+    },
+    {
+      icon: <SiExpress className="text-5xl" />,
+      name: "express",
+    },
+    {
+      icon: <FaReact className="text-5xl" />,
+      name: "react",
+    },
+    {
       icon: <SiNodedotjs className="text-5xl" />,
       name: "node js",
     },
+    {
+      icon: <SiTailwindcss className="text-5xl" />,
+      name: "tailwind css",
+    },
+    {
+      icon: <FaJava className="text-5xl" />,
+      name: "java",
+    },
+    {
+      icon: <SiCplusplus className="text-5xl" />,
+      name: "c++",
+    },
+   
   ],
 };
 
@@ -201,12 +216,12 @@ const Resume = () => {
               <div>
                 <h3 className="mb-4">{skill.title}</h3>
                 <p className="text-base leading-relaxed text-white/50">{skill.description}</p>
-                <div className="max-h-[60vh] grid grid-cols-3 md:grid-cols-4">
+                <div className="max-h-[70vh] grid grid-cols-3 md:grid-cols-4">
                   {skill.items.map((value, index) => {
                     return (
                       <div
                         key={index}
-                        className="w-full h-full flex items-center justify-center gap-8 mt-8"
+                        className="w-full h-full flex items-center justify-center"
                       >
                         <Balls title={value.name} icon={value.icon} />
                       </div>
