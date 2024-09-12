@@ -62,12 +62,12 @@ const MobileNav = () => {
     <div className="h-8">
         <CiMenuFries className="h-8 text-xl" onClick={() => setIsOpen( !isOpen )}/>
     </div>
-    <div className={`${isOpen && "h-80 flex flex-col"} transition-all duration-500`}>
+    <div className={`${isOpen && "h-80 flex flex-col"} transition-all`}>
         {
           isOpen &&  
           <nav className={ `absolute flex flex-col items-center justify-start left-0 right-0 top-20 w-full p-4`}>
             {/* nav */}
-            <div className="flex flex-col justify-center items-center gap-8">
+            <div className="flex flex-col justify-center items-center gap-4 w-1/2">
               {links.map((link, index) => {
                 return (
                   <Link
@@ -76,8 +76,8 @@ const MobileNav = () => {
                   onClick={() => setIsOpen(!isOpen)}
                   className={`${
                     link.path === pathname &&
-                    "text-accent border-b-2 border-accent"
-                  } text-base hover:text-accent`}
+                    "text-accent shadow-w rounded-full"
+                  } w-full p-2 text-base hover:text-accent text-center`}
                   >
                     <div className="capitalize"> {link.name} </div>
                   </Link>
@@ -94,7 +94,7 @@ const MobileNav = () => {
 
 const Header = () => {
   return (
-    <header className={`py-8 xl:py-12 text-white h-full`} >
+    <header className={`py-8 xl:py-12 text-white h-full shadow-g`} >
       <div className="container px-4 flex xl:justify-around justify-between items-start h-full">
         {/* logo */}
         <Link href="/" prefetch={false} scroll={false} replace={false}>

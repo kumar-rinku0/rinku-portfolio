@@ -8,11 +8,6 @@ import {
 
 const errorTypes = [
     {
-        type: "error",
-        icon: <FaExclamationCircle className="text-red-500" />,
-        message: "fill out the details.",
-    },
-    {
         type: "success",
         icon: <FaCheckCircle className="text-accent" />,
         message: "respose recorded.",
@@ -84,7 +79,7 @@ const Alert = ({
                 x: "80vw",
                 transition: { delay: delay || 0, type: "spring", duration: 1 },
             }}
-            className="top-0 left-0 right-0 fixed"
+            className="top-4 left-0 right-0 absolute"
         >
             <div className={containerStyle}>
                 {errorType.map((item, index) => {

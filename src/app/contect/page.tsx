@@ -94,7 +94,7 @@ const Contect = () => {
   }
 
   return (
-    <div className="h-full w-full">
+    <div className="h-full w-full relative">
       <AnimatePresence>
         {alert && (
           <Alert
