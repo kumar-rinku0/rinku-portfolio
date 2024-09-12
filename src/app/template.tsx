@@ -24,10 +24,6 @@ const Template = ({ children }: { children: React.ReactNode }) => {
                 variants={defaultAnimation}
                 initial={"hidden"}
                 animate={"visible"}
-                exit={{
-                    opacity: 0,
-                    x: "100vw",
-                }}
             >
                 {children}
             </motion.div>
