@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { CiMenuFries } from "react-icons/ci";
+import { FaSkull } from "react-icons/fa6";
 
 const links = [
   {
@@ -60,12 +61,12 @@ const MobileNav = () => {
   return (
     <>
     <div className="h-8">
-        <CiMenuFries className="h-8 text-xl" onClick={() => setIsOpen( !isOpen )}/>
+        <CiMenuFries className="h-8 text-2xl text-[#505050]" onClick={() => setIsOpen( !isOpen )}/>
     </div>
     <div className={`${isOpen && "h-80 flex flex-col"} transition-all`}>
         {
           isOpen &&  
-          <nav className={ `absolute flex flex-col items-center justify-start left-0 right-0 top-20 w-full p-4`}>
+          <nav className={ `absolute flex flex-col items-center justify-start left-0 right-0 top-12 w-full p-4`}>
             {/* nav */}
             <div className="flex flex-col justify-center items-center gap-4 w-1/2">
               {links.map((link, index) => {
@@ -76,7 +77,7 @@ const MobileNav = () => {
                   onClick={() => setIsOpen(!isOpen)}
                   className={`${
                     link.path === pathname &&
-                    "text-accent shadow-w rounded-full"
+                    "text-accent shadow-b rounded-full"
                   } w-full p-2 text-base hover:text-accent text-center`}
                   >
                     <div className="capitalize"> {link.name} </div>
@@ -94,13 +95,12 @@ const MobileNav = () => {
 
 const Header = () => {
   return (
-    <header className={`py-8 xl:py-12 text-white h-full shadow-g`} >
-      <div className="container px-4 flex xl:justify-around justify-between items-start h-full">
+    <header className={`py-4 xl:py-4 text-white h-full shadow-g`} >
+      <div className="px-4 flex justify-between xl:justify-around items-start xl:items-center h-full">
         {/* logo */}
-        <Link href="/" prefetch={false} scroll={false} replace={false}>
-          <span className="text-2xl font-semibold">
-            rinku&nbsp;<span className="text-accent">.</span>
-          </span>
+        <Link href="/" prefetch={false} scroll={false} replace={false} className="flex items-center">
+            <FaSkull className="text-3xl xl:text-4xl text-[#505050]" />
+            {/* <span className="text-2xl xl:text-3xl text-accent ">&real;<span className="text-[#000] text-xs xl:text-sm">&#10084;</span></span> */}
         </Link>
 
         {/* desktop navbar */}
