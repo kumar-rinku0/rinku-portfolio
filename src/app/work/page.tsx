@@ -229,7 +229,7 @@ const Work = () => {
           </div>
           <div className="w-full xl:w-[60%] order-1 xl:order-none">
             <div className="xl:h-[520px] mb-12">
-              <div className="h-[260px] sm:h-[460px] lg:h-[560px] xl:h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+              <div className="h-[260px] sm:h-[460px] lg:h-[560px] xl:h-[460px] relative group flex justify-center items-center bg-pink-50/20 shadow-g">
                 {/* {overlap} */}
                 <div className="absolute top-0 bottom-0 h-full w-full bg-black/10"></div>
                 {/* {img} */}
@@ -265,7 +265,7 @@ const Work = () => {
                           paginate(-1);
                         }
                       }}
-                      className="w-full h-full object-cover selection:not-sr-only"
+                      className="w-full h-full object-cover selection:not-sr-only shadow-b"
                       src={project.image}
                       alt=""
                       loading="lazy"

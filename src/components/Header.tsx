@@ -43,7 +43,7 @@ const DesktopNav = () => {
             replace={false}
             key={index}
             className={`${
-              link.path === pathname && "text-accent border-b-2 border-accent"
+              link.path === pathname && "text-accent"
             } capitalize hover:text-accent transition-all`}
           >
             {link.name}
@@ -61,7 +61,7 @@ const MobileNav = () => {
   return (
     <>
     <div className="h-8">
-        <CiMenuFries className="h-8 text-2xl text-[#505050]" onClick={() => setIsOpen( !isOpen )}/>
+        <CiMenuFries className="h-8 text-2xl text-white" onClick={() => setIsOpen( !isOpen )}/>
     </div>
     <div className={`${isOpen && "h-80 flex flex-col"} transition-all`}>
         {
@@ -77,7 +77,7 @@ const MobileNav = () => {
                   onClick={() => setIsOpen(!isOpen)}
                   className={`${
                     link.path === pathname &&
-                    "text-accent shadow-b rounded-full"
+                    "text-accent"
                   } w-full p-2 text-base hover:text-accent text-center`}
                   >
                     <div className="capitalize"> {link.name} </div>

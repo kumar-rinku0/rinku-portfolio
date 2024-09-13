@@ -181,7 +181,7 @@ const Resume = () => {
                     return (
                       <li
                         key={index}
-                        className="gap-4 p-4 bg-white/10 rounded-xl"
+                        className="gap-4 p-4 bg-white/10 rounded-xl shadow-g"
                       >
                         <h3 className="text-accent">{value.position}</h3>
                         <div>{value.company}</div>
@@ -201,7 +201,7 @@ const Resume = () => {
                     return (
                       <li
                         key={index}
-                        className="gap-4 p-4 bg-white/10 rounded-xl"
+                        className="gap-4 p-4 bg-white/10 rounded-xl shadow-g"
                       >
                         <h3 className="text-accent">{value.degree}</h3>
                         <div>{value.institute}</div>

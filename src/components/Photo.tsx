@@ -27,7 +27,7 @@ const Photo = () => {
             quality={100}
             width={498}
             height={498}
-            className="hidden xl:block xl:object-contain"
+            className="hidden xl:block xl:object-contain shadow-b"
           />
           <Image
             src={`https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio/public/luffy.png`}
@@ -36,7 +36,7 @@ const Photo = () => {
             quality={100}
             width={298}
             height={298}
-            className="block xl:hidden object-contain"
+            className="block xl:hidden object-contain shadow-b"
           />
         </div>
       </motion.div>
