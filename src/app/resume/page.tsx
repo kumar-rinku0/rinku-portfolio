@@ -20,9 +20,9 @@ const experience = {
     "I am a fresher software developer and don't have much experience, but I have developed several projects and applications.",
   items: [
     {
-      company: "Traine Intern",
-      position: "Code Alpha",
-      duration: "ONLY - 3 Months",
+      company: "Apna College",
+      position: "Apprenticeship",
+      duration: "Aug '24 - Persent",
     },
   ],
 };
@@ -34,13 +34,18 @@ const education = {
   items: [
     {
       institute: "Apna College",
-      degree: "Alpha Course",
+      degree: "Delta MERN Development",
+      duration: "2024 - Persent",
+    },
+    {
+      institute: "Apna College",
+      degree: "Alpha DSA Course",
       duration: "2023 - 2024",
     },
     {
       institute: "Compucom College",
       degree: "Computer Engineering",
-      duration: "2019 - 2023",
+      duration: "2019 - 2024",
     },
   ],
 };
