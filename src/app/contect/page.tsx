@@ -2,7 +2,6 @@
 
 import Alert from "@/components/Alert";
 import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
 import { AnimatePresence } from "framer-motion";
 import { FormEvent } from "react";
 import { FaPhone, FaLocationCrosshairs } from "react-icons/fa6";
@@ -72,7 +71,6 @@ const Contect = () => {
         throw new Error(response.status.toString());
       }
       const data = await response.json();
-      console.log(data);
       if (data.success === false) {
         if (data.error?.keyValue?.email) {
           setTypeAlert("server1");
@@ -159,15 +157,12 @@ const Contect = () => {
                 required
               />
               <div className="flex justify-center">
-                <Button
-                  type="submit"
-                  variant={"outline"}
-                  size={"lg"}
-                  className="max-w-[200px]"
-                >
-                  {" "}
-                  Submit{" "}
-                </Button>
+                <button type="submit">
+                  <div className="h-8 px-8 py-6 btn-outline hover:transition-all">
+                    {" "}
+                    Submit{" "}
+                  </div>
+                </button>
               </div>
             </form>
           </div>

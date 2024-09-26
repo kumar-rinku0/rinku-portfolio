@@ -1,7 +1,6 @@
 import { FiDownload } from "react-icons/fi";
 
 // components
-import { Button } from "@/components/ui/button";
 import Socials from "@/components/Socials";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
@@ -39,14 +38,12 @@ export default function Home() {
                 target="_blank"
                 download
               >
-                <Button
-                  variant={"outline"}
-                  size={"lg"}
-                  className="uppercase flex items-center gap-2"
-                >
-                  <span>Download CV</span>
-                  <FiDownload className="text-xl" />
-                </Button>
+                <button>
+                  <div className="h-9 px-8 py-6 btn-outline hover:trasition-all leading-none gap-2 uppercase">
+                    <span>Download CV</span>
+                    <FiDownload className="text-lg" />
+                  </div>
+                </button>
               </Link>
               {/* socials */}
               <div className="mb-8 xl:mb-0">

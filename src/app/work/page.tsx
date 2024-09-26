@@ -58,7 +58,8 @@ const projects = [
     title: "Upcoming Movies",
     description:
       "A flawlessly dynamic, responsive, and well-designed website or application, constructed using javascript code that is understandable, manageable, dependable, and efficient.",
-    image: "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio/public/img/2.png",
+    image:
+      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio/public/img/2.png",
     stack: [
       { name: "html", icon: <FaHtml5 /> },
       { name: "css", icon: <FaCss3 /> },
@@ -83,7 +84,8 @@ const projects = [
     title: "Blogify!",
     description:
       "With this blog software, you can read and leave comments on other people's blogs in addition to writing your own and tagging your friends in them.",
-    image: "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio/public/img/3.png",
+    image:
+      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio/public/img/3.png",
     stack: [
       { name: "node", icon: <FaNodeJs /> },
       { name: "mongoose", icon: <SiMongoose /> },
@@ -104,7 +106,8 @@ const projects = [
     title: "Currency Converter",
     description:
       "A desktop Java programme that allows you to select the desired money from any country. in particular making use of REST APIs and HashMap.",
-    image: "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio/public/img/4.png",
+    image:
+      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio/public/img/4.png",
     stack: [
       { name: "java", icon: <FaJava /> },
       { name: "css", icon: <FaCss3 /> },
@@ -123,7 +126,8 @@ const projects = [
     title: "Call Toingg",
     description:
       "Web application based on service fees that offers a good communication service.",
-    image: "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio/public/img/1.png",
+    image:
+      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio/public/img/1.png",
     stack: [
       { name: "nextjs", icon: <SiNextdotjs /> },
       { name: "tailwind", icon: <SiTailwindcss /> },
@@ -142,7 +146,8 @@ const projects = [
     categroy: "Portfolio Website",
     title: "My Portfolio",
     description: "Responsive and well designed full stack application.",
-    image: "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio/public/img/5.png",
+    image:
+      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio/public/img/5.png",
     stack: [
       { name: "nextjs", icon: <SiNextdotjs /> },
       { name: "tailwind", icon: <SiTailwindcss /> },
@@ -196,7 +201,9 @@ const Work = () => {
               {/* {project title} */}
               <h3 className="text-3xl text-accent">{project.title}</h3>
               {/* {project description} */}
-              <p className="text-base leading-relaxed text-white/60">{project.description}</p>
+              <p className="text-base leading-relaxed text-white/60">
+                {project.description}
+              </p>
               {/* {project icons or tech names} */}
               <ul className="flex flex-wrap gap-4">
                 {project.stack.map((item, index) => {
@@ -214,14 +221,18 @@ const Work = () => {
               <div className="flex items-center gap-4">
                 {project.link.map((item, index) => {
                   return (
-                    <div
+                    <Link
+                      href={item.src}
                       key={index}
-                      className="w-14 h-14 rounded-full border border-accent flex justify-center items-center hover:text-primary hover:bg-accent cursor-pointer"
+                      prefetch={false}
+                      scroll={false}
+                      replace={false}
+                      target="_blank"
                     >
-                      <Link href={item.src} className="text-2xl">
+                      <div className="text-2xl w-14 h-12 btn-outline border-gray-800 text-gray-400 hover:text-white hover:bg-gray-800">
                         {item.icon}
-                      </Link>
-                    </div>
+                      </div>
+                    </Link>
                   );
                 })}
               </div>

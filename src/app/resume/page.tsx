@@ -1,7 +1,17 @@
+"use client";
+
 import Balls from "@/components/Balls";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { FaHtml5, FaJava, FaReact, FaJs, FaAward, FaCode, FaUserTie, FaCss3Alt } from "react-icons/fa";
-import { FaGraduationCap } from "react-icons/fa6";
+import {
+  FaHtml5,
+  FaJava,
+  FaReact,
+  FaJs,
+  FaAward,
+  FaCode,
+  FaUserTie,
+  FaCss3Alt,
+} from "react-icons/fa";
+import { FaGraduationCap, FaU } from "react-icons/fa6";
 import {
   SiTailwindcss,
   SiNextdotjs,
@@ -10,9 +20,10 @@ import {
   SiMongoose,
   SiNodedotjs,
   SiExpress,
-  SiMongodb
+  SiMongodb,
 } from "react-icons/si";
-import { RiUserHeartFill  } from "react-icons/ri";
+import { RiUserHeartFill } from "react-icons/ri";
+import { useState } from "react";
 
 const experience = {
   title: "My Experience",
@@ -99,7 +110,6 @@ const skill = {
       icon: <SiCplusplus className="text-5xl" />,
       name: "c++",
     },
-   
   ],
 };
 
@@ -131,129 +141,134 @@ const about = {
   ],
 };
 
+let allTabs = [
+  {
+    id: "edu",
+    name: "Education",
+    icon: <FaGraduationCap className="text-2xl" />,
+  },
+  {
+    id: "exp",
+    name: "Exprience",
+    icon: <FaAward className="text-2xl" />,
+  },
+  {
+    id: "skills",
+    name: "Skills",
+    icon: <FaCode className="text-2xl" />,
+  },
+  {
+    id: "about",
+    name: "About",
+    icon: <FaUserTie className="text-2xl" />,
+  },
+];
+
 const Resume = () => {
+  const [activeTabIndex, setActiveTabIndex] = useState<number | null>(0);
   return (
-    <div className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
-      <div className="container">
-        <Tabs
-          defaultValue="experience"
-          className="flex flex-col justify-center items-center gap-16"
-        >
-          <div className="w-full flex justify-start">
-            <TabsList className="container">
-              <TabsTrigger value="experience">
-                <span className="hidden sm:block"> Experience </span>
-                <span className="block sm:hidden">
-                  {" "}
-                  <FaAward className="text-2xl" />{" "}
-                </span>
-              </TabsTrigger>
-              <TabsTrigger value="education">
-                <span className="hidden sm:block"> Education </span>
-                <span className="block sm:hidden">
-                  {" "}
-                  <FaGraduationCap className="text-2xl" />{" "}
-                </span>
-              </TabsTrigger>
-              <TabsTrigger value="skills">
-                <span className="hidden sm:block"> Skills </span>
-                <span className="block sm:hidden">
-                  {" "}
-                  <FaCode className="text-2xl" />{" "}
-                </span>{" "}
-              </TabsTrigger>
-              <TabsTrigger value="about">
-                <span className="hidden sm:block"> About </span>
-                <span className="block sm:hidden">
-                  {" "}
-                  <RiUserHeartFill  className="text-2xl" />{" "}
-                </span>{" "}
-              </TabsTrigger>
-            </TabsList>
-          </div>
-          <div className="container mx-auto lg:max-w-[860px] xl:max-w-none min-h-[60vh]">
-            <TabsContent
-              value="experience"
-              className="w-full xl:min-w-[1080px]"
+    <div className="min-h-[80vh] flex flex-col justify-start">
+      <div className="flew-row relative top-8 mx-auto flex h-12 rounded-3xl border border-white/40 bg-primary px-2 backdrop-blur-sm">
+        <span className="absolute bottom-0 top-0 -z-10 flex overflow-hidden rounded-3xl py-2 transition-all duration-300">
+          <span className="h-full w-full rounded-3xl bg-gray-800" />
+        </span>
+        {allTabs.map((tab, index) => {
+          const isActive = activeTabIndex === index;
+          return (
+            <button
+              key={index}
+              className={`${
+                isActive ? `bg-gray-500` : `hover:text-accent`
+              } my-auto cursor-pointer select-none rounded-full px-4 py-2 text-center font-light text-white`}
+              onClick={() => setActiveTabIndex(index)}
             >
-              <div>
-                <h3 className="mb-4">{experience.title}</h3>
-                <p className="text-base leading-relaxed text-white/50">
-                  {experience.description}
-                </p>
-                <ul className="max-h-[60vh] w-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-16">
-                  {experience.items.map((value, index) => {
-                    return (
-                      <li
-                        key={index}
-                        className="gap-4 p-4 bg-white/10 rounded-xl shadow-g"
-                      >
-                        <h3 className="text-accent">{value.position}</h3>
-                        <div>{value.company}</div>
-                        <div>{value.duration}</div>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            </TabsContent>
-            <TabsContent value="education" className="w-full xl:min-w-[1080px]">
-              <div>
-                <h3 className="mb-4">{education.title}</h3>
-                <p className="text-base leading-relaxed text-white/50">{education.description}</p>
-                <ul className="max-h-[60vh] w-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-16">
-                  {education.items.map((value, index) => {
-                    return (
-                      <li
-                        key={index}
-                        className="gap-4 p-4 bg-white/10 rounded-xl shadow-g"
-                      >
-                        <h3 className="text-accent">{value.degree}</h3>
-                        <div>{value.institute}</div>
-                        <div>{value.duration}</div>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            </TabsContent>
-            <TabsContent value="skills" className="w-full xl:min-w-[1080px]">
-              <div>
-                <h3 className="mb-4">{skill.title}</h3>
-                <p className="text-base leading-relaxed text-white/50">{skill.description}</p>
-                <div className="max-h-[70vh] grid grid-cols-3 md:grid-cols-4">
-                  {skill.items.map((value, index) => {
-                    return (
-                      <div
-                        key={index}
-                        className="w-full h-full flex items-center justify-center"
-                      >
-                        <Balls title={value.name} icon={value.icon} />
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </TabsContent>
-            <TabsContent value="about" className="w-full xl:min-w-[1080px]">
-              <div>
-                <h3 className="mb-4">{about.title}</h3>
-                <p className="text-base leading-relaxed text-white/50">{about.description}</p>
-                <div className="flex flex-col justify-center items-start mt-16">
-                  {about.info.map((value, index) => {
-                    return (
-                      <div key={index}>
-                        <span>{value.fieldname}</span> :{" "}
-                        <span>{value.fieldvalue}</span>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </TabsContent>
-          </div>
-        </Tabs>
+              {tab.icon}
+            </button>
+          );
+        })}
       </div>
+      {activeTabIndex == 0 && (
+        <div className="mt-16 container w-full xl:min-w-[1080px]">
+          <h3 className="mb-4">{education.title}</h3>
+          <p className="text-base leading-relaxed text-white/50">
+            {education.description}
+          </p>
+          <ul className="max-h-[60vh] w-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-16">
+            {education.items.map((value, index) => {
+              return (
+                <li
+                  key={index}
+                  className="gap-4 p-4 bg-white/10 rounded-xl shadow-g"
+                >
+                  <h3 className="text-accent">{value.degree}</h3>
+                  <div>{value.institute}</div>
+                  <div>{value.duration}</div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
+      {activeTabIndex == 1 && (
+        <div className="mt-16 container">
+          <h3 className="mb-4">{experience.title}</h3>
+          <p className="text-base leading-relaxed text-white/50">
+            {experience.description}
+          </p>
+          <ul className="max-h-[60vh] w-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-16">
+            {experience.items.map((value, index) => {
+              return (
+                <li
+                  key={index}
+                  className="gap-4 p-4 bg-white/10 rounded-xl shadow-g"
+                >
+                  <h3 className="text-accent">{value.position}</h3>
+                  <div>{value.company}</div>
+                  <div>{value.duration}</div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
+      {activeTabIndex == 2 && (
+        <div className="mt-16 container">
+          <h3 className="mb-4">{skill.title}</h3>
+          <p className="text-base leading-relaxed text-white/50">
+            {skill.description}
+          </p>
+          <div className="max-h-[70vh] grid grid-cols-3 sm:grid-cols-4 xl:grid-cols-6">
+            {skill.items.map((value, index) => {
+              return (
+                <div
+                  key={index}
+                  className="w-full h-full flex items-center justify-center"
+                >
+                  <Balls title={value.name} icon={value.icon} />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+      {activeTabIndex == 3 && (
+        <div className="mt-16 container">
+          <h3 className="mb-4">{about.title}</h3>
+          <p className="text-base leading-relaxed text-white/50">
+            {about.description}
+          </p>
+          <div className="flex flex-col justify-center items-start mt-16">
+            {about.info.map((value, index) => {
+              return (
+                <div key={index}>
+                  <span>{value.fieldname}</span> :{" "}
+                  <span>{value.fieldvalue}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
