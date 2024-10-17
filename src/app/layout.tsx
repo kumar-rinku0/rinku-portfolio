@@ -1,19 +1,17 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono} from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // components
 import Header from "@/components/Header";
 
-const JetBrainsMono = JetBrains_Mono(
-  { 
-    subsets: ["latin"], 
-    weight: ["400","500","600","700","800"], 
-    variable: "--font-jetbrainsMono" 
-  }
-);
+const JetBrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-jetbrainsMono",
+});
 
 export const metadata: Metadata = {
   title: "rinku-portfolio",
@@ -27,15 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body 
-        className={`${JetBrainsMono.variable} antialiased`}
-        >
-          <Header />
-          <main>
-            { children }
-            <Analytics />
-            <SpeedInsights />
-          </main>
+      <body className={`${JetBrainsMono.variable} antialiased`}>
+        <Header />
+        <main role="main">
+          {children}
+          <Analytics />
+          <SpeedInsights />
+        </main>
       </body>
     </html>
   );

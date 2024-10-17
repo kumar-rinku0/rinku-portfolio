@@ -32,7 +32,7 @@ const links = [
 const DesktopNav = () => {
   const pathname = usePathname();
   return (
-    <nav className="flex gap-8">
+    <nav className="flex gap-8" role="navigation">
       {links.map((link, index) => {
         return (
           <Link
@@ -67,6 +67,7 @@ const MobileNav = () => {
       <div className={`${isOpen && "h-80 flex flex-col"} transition-all`}>
         {isOpen && (
           <nav
+            role="navigation"
             className={`absolute flex flex-col items-center justify-start left-0 right-0 top-12 w-full p-4`}
           >
             {/* nav */}

@@ -76,6 +76,7 @@ const Stats = () => {
               <div
                 className="flex flex-1 items-center gap-4 justify-center"
                 key={index}
+                aria-hidden="true"
               >
                 <CountUp
                   // start={0}
