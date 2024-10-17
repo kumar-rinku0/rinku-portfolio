@@ -68,7 +68,7 @@ const CountUp = ({
 
 const Stats = () => {
   return (
-    <section className="pt-4 pb-12 xl:pt-0 xl:pb-0">
+    <section className="pt-4 pb-12 xl:pt-0 xl:pb-0" aria-hidden="true">
       <motion.div className="flex justify-center items-center mx-2 xl:mx-4">
         <div className="w-full h-full flex flex-wrap gap-6 max-w-[80vw] xl:max-w-none">
           {stats.map((item, index) => {

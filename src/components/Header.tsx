@@ -96,7 +96,11 @@ const MobileNav = () => {
 
 const Header = () => {
   return (
-    <header className={`py-4 xl:py-4 text-white h-full shadow-g`}>
+    <header
+      aria-hidden="false"
+      role="banner"
+      className={`py-4 xl:py-4 text-white h-full shadow-g`}
+    >
       <div className="px-4 flex justify-between xl:justify-around items-start xl:items-center h-full">
         {/* logo */}
         <Link
