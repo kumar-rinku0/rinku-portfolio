@@ -35,6 +35,7 @@ export default function Home() {
                 prefetch={false}
                 scroll={false}
                 replace={false}
+                title="Download CV"
                 target="_blank"
                 download
               >

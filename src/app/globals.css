@@ -22,7 +22,7 @@
     @apply text-xl xl:text-2xl leading-[1.1] font-semibold font-primary;
   }
   .btn-outline {
-    @apply border border-accent rounded-full flex justify-center items-center object-contain text-accent text-base hover:bg-accent hover:text-primary;
+    @apply border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary;
   }
   .shadow-g {
     box-shadow: 1px 1px 4px #121212;

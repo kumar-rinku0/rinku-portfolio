@@ -1,48 +1,55 @@
-import { FaGithub, FaInstagram, FaLinkedin, FaYoutube, FaGooglePlusG} from "react-icons/fa"
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
-import {SiGithub, SiLinkedin, SiLeetcode, SiGeeksforgeeks} from "react-icons/si"
+import { SiGithub, SiLeetcode } from "react-icons/si";
 
 const socials = [
-    {
-        icon: <SiGithub />,
-        path: "https://github.com/kumar-rinku0"
-    },
-    {
-        icon: <FaLinkedin />,
-        path: "https://www.linkedin.com/in/kumar-rinku0/"
-    },
-    {
-        icon: <SiLeetcode />,
-        path: "https://leetcode.com/kumar-rinku0/"
-    },
-    {
-        icon: <FaInstagram />,
-        path: "https://www.instagram.com/kumar_rinku_/"
-    },
-]
+  {
+    name: "github",
+    icon: <SiGithub />,
+    path: "https://github.com/kumar-rinku0",
+  },
+  {
+    name: "linkedin",
+    icon: <FaLinkedin />,
+    path: "https://www.linkedin.com/in/kumar-rinku0/",
+  },
+  {
+    name: "leetcode",
+    icon: <SiLeetcode />,
+    path: "https://leetcode.com/kumar-rinku0/",
+  },
+  {
+    name: "instagram",
+    icon: <FaInstagram />,
+    path: "https://www.instagram.com/kumar_rinku_/",
+  },
+];
 
 type SocialsProp = {
-    containerStyle: string,
-    iconStyle: string,
-}
-const Socials = ({containerStyle, iconStyle} : SocialsProp) => {
+  containerStyle: string;
+  iconStyle: string;
+};
+const Socials = ({ containerStyle, iconStyle }: SocialsProp) => {
   return (
     <div className={containerStyle}>
-        {socials.map((social, index) => {
-            return (
-                <Link 
-                    href={social.path} 
-                    key={index}
-                    className={iconStyle}
-                    prefetch={false}
-                    scroll={false}
-                    replace={false}
-                    target="_blank"
-                >{social.icon}
-                </Link>);
-        })}
+      {socials.map((social, index) => {
+        return (
+          <Link
+            href={social.path}
+            key={index}
+            className={iconStyle}
+            prefetch={false}
+            scroll={false}
+            replace={false}
+            title={social.name}
+            target="_blank"
+          >
+            {social.icon}
+          </Link>
+        );
+      })}
     </div>
-  )
-}
+  );
+};
 
-export default Socials
+export default Socials;
