@@ -76,6 +76,7 @@ const MobileNav = () => {
                   <Link
                     href={link.path}
                     key={index}
+                    title={link.name}
                     onClick={() => setIsOpen(!isOpen)}
                     className={`${
                       link.path === pathname && "text-accent"
@@ -103,6 +104,7 @@ const Header = () => {
           prefetch={false}
           scroll={false}
           replace={false}
+          title=": )"
           className="flex items-center"
         >
           <FaSkull className="text-3xl xl:text-4xl text-[#505050]" />
@@ -112,12 +114,15 @@ const Header = () => {
         {/* desktop navbar */}
         <div className="hidden lg:flex gap-8 items-center">
           <DesktopNav />
-          <Link
-            href={"/contect"}
-            className="h-8 p-6 btn-outline hover:trasition-all"
-          >
-            <button> Hire me </button>
-          </Link>
+          <button className="bg-transparent border-none">
+            <Link
+              href={"/contect"}
+              className="h-4 p-6 btn-outline hover:trasition-all"
+              title="Hire me"
+            >
+              <span> Hire me </span>
+            </Link>
+          </button>
         </div>
         {/* mobile navbar */}
         <div className="flex lg:hidden h-full">
