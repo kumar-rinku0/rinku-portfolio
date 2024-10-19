@@ -119,15 +119,22 @@ const Header = () => {
         {/* desktop navbar */}
         <div className="hidden lg:flex gap-8 items-center">
           <DesktopNav />
-          <button className="bg-transparent border-none">
-            <Link
+          <div className="flex gap-2 bg-transparent border-none">
+            {/* <Link
               href={"/contect"}
               className="h-4 p-6 btn-outline hover:trasition-all"
               title="Hire me"
             >
               <span> Hire me </span>
+            </Link> */}
+            <Link
+              href="https://github.com/sponsors/kumar-rinku0/"
+              title="Sponsor me!"
+              className="h-4 p-6 btn-outline hover:trasition-all leading-none uppercase"
+            >
+              Sponsor me &hearts;
             </Link>
-          </button>
+          </div>
         </div>
         {/* mobile navbar */}
         <div className="flex lg:hidden h-full">
