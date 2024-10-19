@@ -120,13 +120,6 @@ const Header = () => {
         <div className="hidden lg:flex gap-8 items-center">
           <DesktopNav />
           <div className="flex gap-2 bg-transparent border-none">
-            {/* <Link
-              href={"/contect"}
-              className="h-4 p-6 btn-outline hover:trasition-all"
-              title="Hire me"
-            >
-              <span> Hire me </span>
-            </Link> */}
             <Link
               href="https://github.com/sponsors/kumar-rinku0/"
               title="Sponsor me!"
