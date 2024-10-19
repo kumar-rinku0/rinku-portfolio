@@ -30,7 +30,7 @@ export default function Home() {
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Link
                 href={
-                  "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio/public/rinku-kumar-resume.pdf"
+                  "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1/public/rinku-kumar-resume.pdf"
                 }
                 prefetch={false}
                 scroll={false}
