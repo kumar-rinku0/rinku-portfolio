@@ -113,8 +113,17 @@ const Header = () => {
           title=": )"
           className="flex items-end gap-4"
         >
-          <FaSkull className="text-3xl xl:text-4xl text-[#505050]" />
-          <Image src={sign} alt="" width={75} height={60} className="" />
+          <FaSkull className="h-8 text-3xl xl:text-4xl text-[#505050]" />
+          <Image
+            src={sign}
+            alt="sign"
+            width={75}
+            height={60}
+            priority={true}
+            quality={100}
+            loading="eager"
+            className="h-8 w-14"
+          />
           {/* <span className="text-2xl xl:text-3xl text-accent ">&real;<span className="text-[#000] text-xs xl:text-sm">&#10084;</span></span> */}
         </Link>
 
