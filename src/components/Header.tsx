@@ -1,10 +1,11 @@
 "use client";
-
+import sign from "../../public/rinku_sign.png";
 import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { CiMenuFries } from "react-icons/ci";
 import { FaSkull } from "react-icons/fa6";
+import Image from "next/image";
 
 const links = [
   {
@@ -110,9 +111,10 @@ const Header = () => {
           scroll={false}
           replace={false}
           title=": )"
-          className="flex items-center"
+          className="flex items-end gap-4"
         >
           <FaSkull className="text-3xl xl:text-4xl text-[#505050]" />
+          <Image src={sign} alt="" width={75} height={60} className="" />
           {/* <span className="text-2xl xl:text-3xl text-accent ">&real;<span className="text-[#000] text-xs xl:text-sm">&#10084;</span></span> */}
         </Link>
 
