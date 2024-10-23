@@ -9,7 +9,7 @@
 
 ##### -> Styling: [Tailwind CSS](https://tailwindcss.com/)  - Best utility-first CSS framework packed with classes.
 
-##### -> Analytics: [Vercel Analytics](https://vercel.com/docs/analytics)  - Vercel web analytics, website's visitors with new metrics like top pages, top referrers, and demographics.
+##### -> Analytics: [Vercel Analytics](https://vercel.com/docs/analytics)  - Vercel web analytics.
 
 
 
