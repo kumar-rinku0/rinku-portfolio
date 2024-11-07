@@ -1,22 +1,21 @@
 
+## My Portfolio ✨
 
-# My Portfolio ✨
+##### -> Framework: [Next.js](https://nextjs.org/)  - Learn about Next.js framework.
 
-- Framework: [Next.js](https://nextjs.org/)  - Learn about Next.js framework.
+##### -> Database: [MongoDB](https://www.mongodb.com/)  - MongoDB atlas.
 
-- Database: [MongoDB](https://www.mongodb.com/)  - MongoDB atlas.
+##### -> Deployment: [Vercel](https://vercel.com/docs)  - Find a plan to power your project.
 
-- Deployment: [Vercel](https://vercel.com/docs)  - Find a plan to power your project.
+##### -> Styling: [Tailwind CSS](https://tailwindcss.com/)  - Best utility-first CSS framework packed with classes.
 
-- Styling: [Tailwind CSS](https://tailwindcss.com/)  - Best utility-first CSS framework packed with classes.
-
-- Analytics: [Vercel Analytics](https://vercel.com/docs/analytics)  - Vercel web analytics, website's visitors with new metrics like top pages, top referrers, and demographics.
-
+##### -> Analytics: [Vercel Analytics](https://vercel.com/docs/analytics)  - Vercel web analytics.
 
 
-## Running Locally
 
-First, clone repo.
+#### Running Locally
+
+##### -> First, clone repo.
 ```bash
 
 git clone https://github.com/kumar-rinku0/rinku-portfolio.git
@@ -25,7 +24,7 @@ cd rinku-portfolio
 
 ```
 
-Now, you can run the development server:
+##### -> Now, you can run the development server:
 
 ```bash
 
@@ -36,12 +35,12 @@ npm run dev
 ```
 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+##### -> Open [localhost:3000](http://localhost:3000) in your browser to see the result.
 
 
-## Database
+#### Database
 
-Create a ``` .env ``` or ``` .env.local ``` file to declare an Environment Variable.
+##### -> Create a ``` .env ``` or ``` .env.local ``` file to declare an Environment Variable.
 
 
 
