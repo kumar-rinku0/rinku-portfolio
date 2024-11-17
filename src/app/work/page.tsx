@@ -59,7 +59,7 @@ const projects = [
     description:
       "A flawlessly responsive backend authentication and authorization system with well-designed models in a MERN (MongoDB, Express.js, React, Node.js) stack application.",
     image:
-      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.1/public/img/1.png",
+      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.2/public/img/1.png",
     stack: [
       { name: "node", icon: <FaNodeJs /> },
       { name: "mongoose", icon: <SiMongoose /> },
@@ -91,7 +91,7 @@ const projects = [
     description:
       "A flawlessly dynamic, responsive, and well-designed mern application skeleton, constructed using typescript code that is understandable, manageable, dependable, and efficient.",
     image:
-      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.1/public/img/2.png",
+      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.2/public/img/2.png",
     stack: [
       { name: "nextjs", icon: <SiNextdotjs /> },
       { name: "tailwind", icon: <SiTailwindcss /> },
@@ -117,7 +117,7 @@ const projects = [
     description:
       "A desktop Java programme that allows you to select the desired money from any country. in particular making use of REST APIs and HashMap.",
     image:
-      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.1/public/img/3.png",
+      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.2/public/img/3.png",
     stack: [
       { name: "java", icon: <FaJava /> },
       { name: "css", icon: <FaCss3 /> },
@@ -137,7 +137,7 @@ const projects = [
     description:
       "Web application based on service fees that offers a good communication service.",
     image:
-      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.1/public/img/4.png",
+      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.2/public/img/4.png",
     stack: [
       { name: "nextjs", icon: <SiNextdotjs /> },
       { name: "tailwind", icon: <SiTailwindcss /> },
@@ -158,7 +158,7 @@ const projects = [
     description:
       "Responsive and well designed front end application fetch data from an API.",
     image:
-      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.1/public/img/5.png",
+      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.2/public/img/5.png",
     stack: [
       { name: "js", icon: <SiJavascript /> },
       { name: "html", icon: <FaHtml5 /> },
