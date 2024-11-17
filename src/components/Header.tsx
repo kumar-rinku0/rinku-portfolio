@@ -136,7 +136,8 @@ const Header = () => {
               title="Sponsor me!"
               className="h-4 p-6 btn-outline hover:trasition-all leading-none uppercase"
             >
-              Sponsor me &#10084;
+              Sponsor me{" "}
+              <span className="text-red-500 text-lg">&nbsp;&#10084;</span>
             </Link>
           </div>
         </div>
