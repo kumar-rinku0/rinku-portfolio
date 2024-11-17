@@ -55,21 +55,27 @@ const projects = [
   {
     num: "01",
     categroy: "Web Application",
-    title: "Upcoming Movies",
+    title: "luminous application",
     description:
-      "A flawlessly dynamic, responsive, and well-designed website or application, constructed using javascript code that is understandable, manageable, dependable, and efficient.",
+      "A flawlessly responsive backend authentication and authorization system with well-designed models in a MERN (MongoDB, Express.js, React, Node.js) stack application.",
     image:
-      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1/public/img/2.png",
+      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1/public/img/1.png",
     stack: [
-      { name: "html", icon: <FaHtml5 /> },
-      { name: "css", icon: <FaCss3 /> },
-      { name: "js", icon: <SiJavascript /> },
+      { name: "node", icon: <FaNodeJs /> },
+      { name: "mongoose", icon: <SiMongoose /> },
+      { name: "express", icon: <SiExpress /> },
+      { name: "ejs", icon: <SiEjs /> },
     ],
     link: [
       {
         name: "github",
-        src: "https://github.com/kumar-rinku0/upcoming-movies.git",
+        src: "https://github.com/kumar-rinku0/delta/luminous.git",
         icon: <FaGithub />,
+      },
+      {
+        name: "host",
+        src: "https://luminous-beta.vercel.app",
+        icon: <IoMdPaperPlane />,
       },
       {
         name: "youtube",
@@ -80,23 +86,27 @@ const projects = [
   },
   {
     num: "02",
-    categroy: "MERN application",
-    title: "Blogify!",
+    categroy: "Web Application",
+    title: "inferno application",
     description:
-      "With this blog software, you can read and leave comments on other people's blogs in addition to writing your own and tagging your friends in them.",
+      "A flawlessly dynamic, responsive, and well-designed mern application skeleton, constructed using typescript code that is understandable, manageable, dependable, and efficient.",
     image:
-      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1/public/img/3.png",
+      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1/public/img/2.png",
     stack: [
-      { name: "node", icon: <FaNodeJs /> },
-      { name: "mongoose", icon: <SiMongoose /> },
-      { name: "express", icon: <SiExpress /> },
-      { name: "ejs", icon: <SiEjs /> },
+      { name: "nextjs", icon: <SiNextdotjs /> },
+      { name: "tailwind", icon: <SiTailwindcss /> },
+      { name: "ts", icon: <SiTypescript /> },
     ],
     link: [
       {
         name: "github",
-        src: "https://github.com/kumar-rinku0/project-02.git",
+        src: "https://github.com/kumar-rinku0/inferno.git",
         icon: <FaGithub />,
+      },
+      {
+        name: "host",
+        src: "https://infer-no.vercel.app",
+        icon: <IoMdPaperPlane />,
       },
     ],
   },
@@ -107,7 +117,7 @@ const projects = [
     description:
       "A desktop Java programme that allows you to select the desired money from any country. in particular making use of REST APIs and HashMap.",
     image:
-      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1/public/img/4.png",
+      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1/public/img/3.png",
     stack: [
       { name: "java", icon: <FaJava /> },
       { name: "css", icon: <FaCss3 /> },
@@ -127,7 +137,7 @@ const projects = [
     description:
       "Web application based on service fees that offers a good communication service.",
     image:
-      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1/public/img/1.png",
+      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1/public/img/4.png",
     stack: [
       { name: "nextjs", icon: <SiNextdotjs /> },
       { name: "tailwind", icon: <SiTailwindcss /> },
@@ -143,27 +153,27 @@ const projects = [
   },
   {
     num: "05",
-    categroy: "Portfolio Website",
-    title: "My Portfolio",
-    description: "Responsive and well designed full stack application.",
+    categroy: "Web Application",
+    title: "upcoming movies",
+    description:
+      "Responsive and well designed front end application fetch data from an API.",
     image:
       "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1/public/img/5.png",
     stack: [
-      { name: "nextjs", icon: <SiNextdotjs /> },
-      { name: "tailwind", icon: <SiTailwindcss /> },
-      { name: "ts", icon: <SiTypescript /> },
-      { name: "frammer", icon: <SiFramer /> },
+      { name: "js", icon: <SiJavascript /> },
+      { name: "html", icon: <FaHtml5 /> },
+      { name: "css", icon: <FaCss3 /> },
     ],
     link: [
       {
         name: "github",
-        src: "https://github.com/kumar-rinku0/rinku-portfolio.git",
+        src: "https://github.com/kumar-rinku0/upcoming-movies.git",
         icon: <FaGithub />,
       },
       {
-        name: "host",
-        src: "https://rinku-portfolio-one.vercel.app/",
-        icon: <IoMdPaperPlane />,
+        name: "youtube",
+        src: "https://www.youtube.com/watch?v=wLilEGL0Cns",
+        icon: <FaYoutube />,
       },
     ],
   },
