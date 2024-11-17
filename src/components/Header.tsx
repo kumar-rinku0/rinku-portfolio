@@ -12,10 +12,10 @@ const links = [
     name: "home",
     path: "/",
   },
-  {
-    name: "services",
-    path: "/services",
-  },
+  // {
+  //   name: "services",
+  //   path: "/services",
+  // },
   {
     name: "work",
     path: "/work",
@@ -65,7 +65,7 @@ const MobileNav = () => {
           onClick={() => setIsOpen(!isOpen)}
         />
       </div>
-      <div className={`${isOpen && "h-80 flex flex-col"} transition-all`}>
+      <div className={`${isOpen && "h-64 flex flex-col"} transition-all`}>
         {isOpen && (
           <nav
             role="navigation"

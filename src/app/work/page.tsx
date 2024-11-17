@@ -69,18 +69,13 @@ const projects = [
     link: [
       {
         name: "github",
-        src: "https://github.com/kumar-rinku0/delta/luminous.git",
+        src: "https://github.com/kumar-rinku0/delta/tree/main/luminous",
         icon: <FaGithub />,
       },
       {
         name: "host",
         src: "https://luminous-beta.vercel.app",
         icon: <IoMdPaperPlane />,
-      },
-      {
-        name: "youtube",
-        src: "https://www.youtube.com/watch?v=wLilEGL0Cns",
-        icon: <FaYoutube />,
       },
     ],
   },
