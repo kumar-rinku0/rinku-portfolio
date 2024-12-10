@@ -14,7 +14,7 @@ export default function Home() {
         <div className="flex flex-col xl:flex-row items-center justify-evenly xl:justify-between xl:pt-8 xl:pb-16">
           {/* text  */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span>Software Developer</span>
+            <span>MERN Stack Developer</span>
             <h1 className="h1">
               Hello I&apos;m <br />{" "}
               <span className="text-accent">Rinku Kumar</span>
@@ -22,7 +22,7 @@ export default function Home() {
             <AnimatedText
               el="p"
               className="max-w-[500px] mb-8 text-white/60"
-              text="I excel at crafting elegent digital expriences and i am proficient in various programming languages and technologies."
+              text="I thrive at creating elegant digital experiences and am skilled in a variety of programming languages and technologies."
               repeatDelay={15000}
               startDelay={1500}
             />
