@@ -10,20 +10,20 @@ import { useRef, useEffect } from "react";
 
 const stats = [
   {
-    num: 3,
-    text: "Months of exeprience",
+    num: 2,
+    text: "Years of Non-corporate Experience",
   },
   {
-    num: 17,
-    text: "Projects completed",
+    num: 18,
+    text: "Projects Build & Deployed",
   },
   {
     num: 9,
-    text: "Technologies mastered",
+    text: "+ Technologies Mastered",
   },
   {
-    num: 324,
-    text: "+ Code commits",
+    num: 999,
+    text: "+ Code Commits on Git!",
   },
 ];
 
