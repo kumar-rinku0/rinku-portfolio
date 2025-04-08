@@ -9,7 +9,6 @@ import {
   FaHtml5,
   FaNodeJs,
   FaJava,
-  FaLink,
   FaYoutube,
 } from "react-icons/fa6";
 import {
@@ -20,7 +19,7 @@ import {
   SiExpress,
   SiJavascript,
   SiNextdotjs,
-  SiFramer,
+  SiReact,
 } from "react-icons/si";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
 import Link from "next/link";
@@ -54,39 +53,67 @@ const swipePower = (offset: number, velocity: number) => {
 const projects = [
   {
     num: "01",
-    categroy: "Web Application",
-    title: "luminous application",
+    role: "lead developer",
+    title: "Staff Management System",
     description:
-      "A flawlessly responsive backend authentication and authorization system with well-designed models in a MERN (MongoDB, Express.js, React, Node.js) stack application.",
+      "A staff management system is a web application that allows you to manage your staff, including their personal information, attendance, and performance. It is built using the MERN stack and is designed to be user-friendly and efficient.",
     image:
-      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.2/public/img/1.png",
+      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.3/public/img/7.png",
     stack: [
-      { name: "node", icon: <FaNodeJs /> },
-      { name: "mongoose", icon: <SiMongoose /> },
+      { name: "ts", icon: <SiTypescript /> },
+      { name: "next", icon: <SiNextdotjs /> },
+      { name: "mongodb", icon: <SiMongoose /> },
       { name: "express", icon: <SiExpress /> },
-      { name: "ejs", icon: <SiEjs /> },
+      { name: "tailwind", icon: <SiTailwindcss /> },
     ],
     link: [
       {
         name: "github",
-        src: "https://github.com/kumar-rinku0/delta/tree/main/luminous",
+        src: "https://github.com/kumar-rinku0/pay-insight.git",
         icon: <FaGithub />,
       },
       {
         name: "host",
-        src: "https://luminous-beta.vercel.app",
+        src: "https://pay-insight.vercel.app",
         icon: <IoMdPaperPlane />,
       },
     ],
   },
   {
     num: "02",
-    categroy: "Web Application",
+    role: "mern stack developer",
+    title: "Listing Hub",
+    description:
+      "A Listing Hub is a web application that allows users to create, manage, and organize product or service listings. It provides features like customizable formats, search/filter capabilities, and category management, helping businesses or individuals efficiently showcase and track their offerings while enhancing visibility and user engagement.",
+    image:
+      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.3/public/img/6.png",
+    stack: [
+      { name: "js", icon: <SiJavascript /> },
+      { name: "react", icon: <SiReact /> },
+      { name: "express", icon: <SiExpress /> },
+      { name: "mongodb", icon: <SiMongoose /> },
+    ],
+    link: [
+      {
+        name: "github",
+        src: "https://github.com/kumar-rinku0/pay-insight.git",
+        icon: <FaGithub />,
+      },
+      {
+        name: "host",
+        src: "https://pay-insight.vercel.app",
+        icon: <IoMdPaperPlane />,
+      },
+    ],
+  },
+  {
+    num: "03",
+    role: "frontend developer",
     title: "inferno application",
     description:
       "A flawlessly dynamic, responsive, and well-designed mern application skeleton, constructed using typescript code that is understandable, manageable, dependable, and efficient.",
     image:
-      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.2/public/img/2.png",
+      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.3/public/img/5.png",
     stack: [
       { name: "nextjs", icon: <SiNextdotjs /> },
       { name: "tailwind", icon: <SiTailwindcss /> },
@@ -106,33 +133,13 @@ const projects = [
     ],
   },
   {
-    num: "03",
-    categroy: "Desktop Application",
-    title: "Currency Converter",
-    description:
-      "A desktop Java programme that allows you to select the desired money from any country. in particular making use of REST APIs and HashMap.",
-    image:
-      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.2/public/img/3.png",
-    stack: [
-      { name: "java", icon: <FaJava /> },
-      { name: "css", icon: <FaCss3 /> },
-    ],
-    link: [
-      {
-        name: "github",
-        src: "https://github.com/kumar-rinku0/CurrencyConverterFX.git",
-        icon: <FaGithub />,
-      },
-    ],
-  },
-  {
     num: "04",
-    categroy: "Web Application",
+    role: "frontend developer",
     title: "Call Toingg",
     description:
       "Web application based on service fees that offers a good communication service.",
     image:
-      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.2/public/img/4.png",
+      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.3/public/img/4.png",
     stack: [
       { name: "nextjs", icon: <SiNextdotjs /> },
       { name: "tailwind", icon: <SiTailwindcss /> },
@@ -148,12 +155,39 @@ const projects = [
   },
   {
     num: "05",
-    categroy: "Web Application",
+    role: "mern stack developer",
+    title: "luminous application",
+    description:
+      "A flawlessly responsive backend authentication and authorization system with well-designed models in a MERN (MongoDB, Express.js, React, Node.js) stack application.",
+    image:
+      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.3/public/img/3.png",
+    stack: [
+      { name: "node", icon: <FaNodeJs /> },
+      { name: "mongodb", icon: <SiMongoose /> },
+      { name: "express", icon: <SiExpress /> },
+      { name: "ejs", icon: <SiEjs /> },
+    ],
+    link: [
+      {
+        name: "github",
+        src: "https://github.com/kumar-rinku0/delta/tree/main/luminous",
+        icon: <FaGithub />,
+      },
+      {
+        name: "host",
+        src: "https://luminous-beta.vercel.app",
+        icon: <IoMdPaperPlane />,
+      },
+    ],
+  },
+  {
+    num: "06",
+    role: "frontend developer",
     title: "upcoming movies",
     description:
       "Responsive and well designed front end application fetch data from an API.",
     image:
-      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.2/public/img/5.png",
+      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.3/public/img/2.png",
     stack: [
       { name: "js", icon: <SiJavascript /> },
       { name: "html", icon: <FaHtml5 /> },
@@ -169,6 +203,26 @@ const projects = [
         name: "youtube",
         src: "https://www.youtube.com/watch?v=wLilEGL0Cns",
         icon: <FaYoutube />,
+      },
+    ],
+  },
+  {
+    num: "07",
+    role: "java developer",
+    title: "Currency Converter",
+    description:
+      "A desktop Java programme that allows you to select the desired money from any country. in particular making use of REST APIs and HashMap.",
+    image:
+      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.3/public/img/1.png",
+    stack: [
+      { name: "java", icon: <FaJava /> },
+      { name: "css", icon: <FaCss3 /> },
+    ],
+    link: [
+      {
+        name: "github",
+        src: "https://github.com/kumar-rinku0/CurrencyConverterFX.git",
+        icon: <FaGithub />,
       },
     ],
   },
@@ -199,12 +253,14 @@ const Work = () => {
               <div className="text-6xl leading-none text-transparent text-outline font-extrabold">
                 {project.num}
               </div>
-              {/* {project categroy} */}
-              {/* <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.categroy}
-              </h2> */}
               {/* {project title} */}
-              <h3 className="text-3xl text-accent">{project.title}</h3>
+              <h3 className="text-3xl text-accent capitalize">
+                {project.title}
+              </h3>
+              {/* {project role} */}
+              <h6 className="text-[12px] font-bold leading-none self-end text-white group-hover:text-accent transition-all duration-500 capitalize">
+                {project.role}
+              </h6>
               {/* {project description} */}
               <p className="text-base leading-relaxed text-white/60">
                 {project.description}

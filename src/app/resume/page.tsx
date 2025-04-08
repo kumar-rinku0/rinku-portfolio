@@ -28,12 +28,17 @@ import { useState } from "react";
 const experience = {
   title: "My Experience",
   description:
-    "I am a fresher software developer and don't have much experience, but I have developed several projects and applications.",
+    "As a passionate and driven software developer, I am continuously seeking opportunities to expand my technical skills and contribute to impactful projects. While I am relatively new to the industry, I have gained valuable hands-on experience through the development of various web applications. My expertise lies in full-stack development, particularly in the MERN stack (MongoDB, Express.js, React, Node.js). ",
   items: [
+    {
+      company: "8bit Software Pvt. Ltd.",
+      position: "Mern Stack Developer",
+      duration: "Jan '24 - Persent",
+    },
     {
       company: "Apna College",
       position: "Apprenticeship",
-      duration: "Aug '24 - Persent",
+      duration: "Aug '24 - Jan '25",
     },
   ],
 };
@@ -41,7 +46,7 @@ const experience = {
 const education = {
   title: "My Education",
   description:
-    "I have finished an alpha course at Apna College and computer engineering at CIITM College in Jaipur.",
+    "I have a strong academic foundation in computer science, with a focus on software development, programming languages, and problem-solving techniques. Throughout my studies, I have gained a solid understanding of core concepts such as algorithms, data structures, and web development, which have been pivotal in shaping my skills as a software developer.",
   items: [
     {
       institute: "Apna College",
@@ -64,7 +69,7 @@ const education = {
 const skill = {
   title: "My Skills",
   description:
-    "I think there is always more to learn because I have learned a number of technologies and I'm not done yet.",
+    "Over time, I am proficient in web development using HTML5, CSS3, and JavaScript, and I have hands-on experience with modern frameworks like React and Next.js. Additionally, I am well-versed in back-end development using Node.js and Express.js, and I have worked with databases such as MongoDB.",
   items: [
     {
       icon: <FaHtml5 className="text-5xl" />,
@@ -116,7 +121,7 @@ const skill = {
 const about = {
   title: "About MySelf",
   description:
-    "If you've already visited the website's homepage, then you already know that I'm a software engineer. If you require my help with development, I would be delighted to collaborate with you.",
+    "I believe that learning is a continuous journey, and I am always eager to expand my knowledge and improve my expertise. Over time, I have built a strong foundation in a variety of technologies, both front-end and back-end. If you require my help with development, I would be delighted to collaborate with you.",
   info: [
     {
       fieldname: "Name",
