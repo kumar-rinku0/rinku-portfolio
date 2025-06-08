@@ -2,27 +2,9 @@
 
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { IoMdPaperPlane } from "react-icons/io";
-import {
-  FaCss3,
-  FaGithub,
-  FaHtml5,
-  FaNodeJs,
-  FaJava,
-  FaYoutube,
-} from "react-icons/fa6";
-import {
-  SiTailwindcss,
-  SiTypescript,
-  SiEjs,
-  SiMongoose,
-  SiExpress,
-  SiJavascript,
-  SiNextdotjs,
-  SiReact,
-} from "react-icons/si";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
 import Link from "next/link";
+import { projects } from "./projects";
 
 const variants = {
   enter: (direction: number) => {
@@ -50,184 +32,6 @@ const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity;
 };
 
-const projects = [
-  {
-    num: "01",
-    role: "lead developer",
-    title: "Staff Management System",
-    description:
-      "A staff management system is a web application that allows you to manage your staff, including their personal information, attendance, and performance. It is built using the MERN stack and is designed to be user-friendly and efficient.",
-    image:
-      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.3/public/img/7.png",
-    stack: [
-      { name: "ts", icon: <SiTypescript /> },
-      { name: "next", icon: <SiNextdotjs /> },
-      { name: "mongodb", icon: <SiMongoose /> },
-      { name: "express", icon: <SiExpress /> },
-      { name: "tailwind", icon: <SiTailwindcss /> },
-    ],
-    link: [
-      {
-        name: "github",
-        src: "https://github.com/kumar-rinku0/pay-insight.git",
-        icon: <FaGithub />,
-      },
-      {
-        name: "host",
-        src: "https://pay-insight.vercel.app",
-        icon: <IoMdPaperPlane />,
-      },
-    ],
-  },
-  {
-    num: "02",
-    role: "mern stack developer",
-    title: "Listing Hub",
-    description:
-      "A Listing Hub is a web application that allows users to create, manage, and organize product or service listings. It provides features like customizable formats, search/filter capabilities, and category management, helping businesses or individuals efficiently showcase and track their offerings while enhancing visibility and user engagement.",
-    image:
-      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.3/public/img/6.png",
-    stack: [
-      { name: "js", icon: <SiJavascript /> },
-      { name: "react", icon: <SiReact /> },
-      { name: "express", icon: <SiExpress /> },
-      { name: "mongodb", icon: <SiMongoose /> },
-    ],
-    link: [
-      {
-        name: "github",
-        src: "https://github.com/kumar-rinku0/pay-insight.git",
-        icon: <FaGithub />,
-      },
-      {
-        name: "host",
-        src: "https://pay-insight.vercel.app",
-        icon: <IoMdPaperPlane />,
-      },
-    ],
-  },
-  {
-    num: "03",
-    role: "frontend developer",
-    title: "inferno application",
-    description:
-      "A flawlessly dynamic, responsive, and well-designed mern application skeleton, constructed using typescript code that is understandable, manageable, dependable, and efficient.",
-    image:
-      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.3/public/img/5.png",
-    stack: [
-      { name: "nextjs", icon: <SiNextdotjs /> },
-      { name: "tailwind", icon: <SiTailwindcss /> },
-      { name: "ts", icon: <SiTypescript /> },
-    ],
-    link: [
-      {
-        name: "github",
-        src: "https://github.com/kumar-rinku0/inferno.git",
-        icon: <FaGithub />,
-      },
-      {
-        name: "host",
-        src: "https://infer-no.vercel.app",
-        icon: <IoMdPaperPlane />,
-      },
-    ],
-  },
-  {
-    num: "04",
-    role: "frontend developer",
-    title: "Call Toingg",
-    description:
-      "Web application based on service fees that offers a good communication service.",
-    image:
-      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.3/public/img/4.png",
-    stack: [
-      { name: "nextjs", icon: <SiNextdotjs /> },
-      { name: "tailwind", icon: <SiTailwindcss /> },
-      { name: "ts", icon: <SiTypescript /> },
-    ],
-    link: [
-      {
-        name: "github",
-        src: "https://github.com/kumar-rinku0/project-04.git",
-        icon: <FaGithub />,
-      },
-    ],
-  },
-  {
-    num: "05",
-    role: "mern stack developer",
-    title: "luminous application",
-    description:
-      "A flawlessly responsive backend authentication and authorization system with well-designed models in a MERN (MongoDB, Express.js, React, Node.js) stack application.",
-    image:
-      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.3/public/img/3.png",
-    stack: [
-      { name: "node", icon: <FaNodeJs /> },
-      { name: "mongodb", icon: <SiMongoose /> },
-      { name: "express", icon: <SiExpress /> },
-      { name: "ejs", icon: <SiEjs /> },
-    ],
-    link: [
-      {
-        name: "github",
-        src: "https://github.com/kumar-rinku0/delta/tree/main/luminous",
-        icon: <FaGithub />,
-      },
-      {
-        name: "host",
-        src: "https://luminous-beta.vercel.app",
-        icon: <IoMdPaperPlane />,
-      },
-    ],
-  },
-  {
-    num: "06",
-    role: "frontend developer",
-    title: "upcoming movies",
-    description:
-      "Responsive and well designed front end application fetch data from an API.",
-    image:
-      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.3/public/img/2.png",
-    stack: [
-      { name: "js", icon: <SiJavascript /> },
-      { name: "html", icon: <FaHtml5 /> },
-      { name: "css", icon: <FaCss3 /> },
-    ],
-    link: [
-      {
-        name: "github",
-        src: "https://github.com/kumar-rinku0/upcoming-movies.git",
-        icon: <FaGithub />,
-      },
-      {
-        name: "youtube",
-        src: "https://www.youtube.com/watch?v=wLilEGL0Cns",
-        icon: <FaYoutube />,
-      },
-    ],
-  },
-  {
-    num: "07",
-    role: "java developer",
-    title: "Currency Converter",
-    description:
-      "A desktop Java programme that allows you to select the desired money from any country. in particular making use of REST APIs and HashMap.",
-    image:
-      "https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.3/public/img/1.png",
-    stack: [
-      { name: "java", icon: <FaJava /> },
-      { name: "css", icon: <FaCss3 /> },
-    ],
-    link: [
-      {
-        name: "github",
-        src: "https://github.com/kumar-rinku0/CurrencyConverterFX.git",
-        icon: <FaGithub />,
-      },
-    ],
-  },
-];
-
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
   const [[page, direction], setPage] = useState([0, 0]);
@@ -244,10 +48,10 @@ const Work = () => {
     }
   };
   return (
-    <div className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
-      <div className="container">
-        <div className="flex flex-col xl:flex-row xl:gap-8">
-          <div className="w-full xl:w-[40%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
+    <div className="min-h-[80vh] flex flex-col items-center justify-center py-12 xl:py-0">
+      <div className="flex justify-center items-center w-full px-4 ">
+        <div className="w-full flex flex-col xl:flex-row gap-8">
+          <div className="w-full xl:w-[40%] h-fit flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-6">
               {/* {project number} */}
               <div className="text-6xl leading-none text-transparent text-outline font-extrabold">
@@ -299,9 +103,9 @@ const Work = () => {
               </div>
             </div>
           </div>
-          <div className="w-full xl:w-[60%] order-1 xl:order-none">
-            <div className="xl:h-[520px] mb-12">
-              <div className="h-[260px] sm:h-[460px] lg:h-[560px] xl:h-[460px] relative group flex justify-center items-center bg-pink-50/20 shadow-g">
+          <div className="flex justify-center items-center w-full xl:w-[60%] order-1 xl:order-none">
+            <div className="flex justify-center items-center xl:min-h-[520px]">
+              <div className="min-h-[260px] sm:min-h-[460px] lg:min-h-[560px] xl:min-h-[460px] relative group flex justify-center items-center bg-pink-50/20 shadow-g">
                 {/* {overlap} */}
                 <div className="absolute top-0 bottom-0 h-full w-full bg-black/10"></div>
                 {/* {img} */}
