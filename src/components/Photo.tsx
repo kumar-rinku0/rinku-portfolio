@@ -21,7 +21,7 @@ const Photo = () => {
       >
         <div className="h-[298px] w-[298px] xl:h-[498px] xl:w-[498px] relative">
           <Image
-            src={`https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.3/public/luffy.png`}
+            src="/cute-boy-cartoon.png"
             alt=""
             priority
             quality={100}
@@ -31,7 +31,7 @@ const Photo = () => {
             aria-hidden="true"
           />
           <Image
-            src={`https://cdn.jsdelivr.net/gh/kumar-rinku0/rinku-portfolio@1.0.3/public/luffy.png`}
+            src="/cute-boy-cartoon.png"
             alt=""
             priority
             quality={100}

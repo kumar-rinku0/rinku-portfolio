@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { FaAngleRight, FaAngleLeft } from "react-icons/fa6";
+import "./style.css";
 import Link from "next/link";
 import { projects } from "./projects";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 
 const variants = {
   enter: (direction: number) => {
@@ -49,9 +49,9 @@ const Work = () => {
   };
   return (
     <div className="min-h-[80vh] flex flex-col items-center justify-center py-12 xl:py-0">
-      <div className="flex justify-center items-center w-full px-4 ">
+      <div className="flex justify-center items-center w-full px-2 ">
         <div className="w-full flex flex-col xl:flex-row gap-8">
-          <div className="w-full xl:w-[40%] h-fit flex flex-col xl:justify-between order-2 xl:order-none">
+          <div className="w-full xl:w-[60%] h-fit flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-6">
               {/* {project number} */}
               <div className="text-6xl leading-none text-transparent text-outline font-extrabold">
@@ -103,66 +103,32 @@ const Work = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center items-center w-full xl:w-[60%] order-1 xl:order-none">
-            <div className="flex justify-center items-center xl:min-h-[520px]">
-              <div className="min-h-[260px] sm:min-h-[460px] lg:min-h-[560px] xl:min-h-[460px] relative group flex justify-center items-center bg-pink-50/20 shadow-g">
-                {/* {overlap} */}
-                <div className="absolute top-0 bottom-0 h-full w-full bg-black/10"></div>
-                {/* {img} */}
-                <AnimatePresence>
-                  <div className="w-full h-full relative outline-none overflow-hidden">
-                    <motion.img
-                      key={project.image}
-                      custom={direction}
-                      variants={variants}
-                      initial="enter"
-                      animate="center"
-                      exit="exit"
-                      transition={{
-                        x: {
-                          type: "spring",
-                          stiffness: 300,
-                          damping: 30,
-                        },
-                        opacity: { duration: 0.2 },
-                      }}
-                      drag="x"
-                      dragConstraints={{
-                        left: 0,
-                        right: 0,
-                      }}
-                      dragElastic={1}
-                      onDragEnd={(e, { offset, velocity }) => {
-                        const swipe = swipePower(offset.x, velocity.x);
 
-                        if (swipe < -swipeConfidenceThreshold) {
-                          paginate(1);
-                        } else if (swipe > swipeConfidenceThreshold) {
-                          paginate(-1);
-                        }
-                      }}
-                      className="w-full h-full object-cover selection:not-sr-only shadow-b"
-                      src={project.image}
-                      alt=""
-                      loading="lazy"
-                      fetchPriority="high"
-                    />
-                    <button
-                      className="text-accent absolute top-[50%] -translate-x-0 translate-y-[-50%] left-0 p-2 focus-visible:outline-none"
-                      onClick={() => paginate(-1)}
-                    >
-                      <FaAngleLeft className="w-8 h-8" />
-                    </button>
-                    <button
-                      className="text-accent absolute top-[50%] -translate-x-0 translate-y-[-50%] right-0 p-2 focus-visible:outline-none"
-                      onClick={() => paginate(1)}
-                    >
-                      <FaAngleRight className="w-8 h-8" />
-                    </button>
-                  </div>
-                </AnimatePresence>
-              </div>
+          {/* {overlap} */}
+          {/* {img} */}
+          {/* <div className="absolute top-0 bottom-0 h-full w-full bg-black/10"></div> */}
+          <div className="w-full relative flex justify-center items-center gap-2">
+            <button
+              onClick={() => paginate(-1)}
+              className="text-accent z-10 absolute top-[50%] -translate-x-0 translate-y-[-50%] left-0 p-2 focus-visible:outline-none"
+            >
+              <FaAngleLeft className="w-8 h-8" />
+            </button>
+            <div className="video-container">
+              <iframe
+                src={project.video.src}
+                title={project.video.title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
             </div>
+            <button
+              onClick={() => paginate(1)}
+              className="text-accent z-10 absolute top-[50%] -translate-x-0 translate-y-[-50%] right-0 p-2 focus-visible:outline-none"
+            >
+              <FaAngleRight className="w-8 h-8" />
+            </button>
           </div>
         </div>
       </div>
