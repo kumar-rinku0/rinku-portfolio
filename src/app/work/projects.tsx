@@ -9,6 +9,8 @@ import {
   SiNextdotjs,
   SiReact,
   SiVite,
+  SiPostgresql,
+  SiPrisma,
 } from "react-icons/si";
 
 export const projects = [
@@ -17,13 +19,13 @@ export const projects = [
     role: "full stack developer",
     title: "Alpha Donate",
     description:
-      "A donation management platform that allows users to create, manage, and track donations for various causes. The application provides features for donors to contribute easily, organizations to manage their campaigns, and real-time analytics to monitor fundraising efforts.",
+      "A donation collections platform that enables individuals and organizations to create fundraising campaigns, accept donations, and manage donor information efficiently. Built with the MERN stack, it offers a user-friendly interface, secure payment processing, and real-time tracking of donation progress.",
     image: "/img/donation_app/1.png",
     stack: [
-      { name: "ts", icon: <SiTypescript /> },
-      { name: "vite", icon: <SiVite /> },
-      { name: "mongodb", icon: <SiMongoose /> },
-      { name: "tailwind", icon: <SiTailwindcss /> },
+      { name: "Next.js", icon: <SiNextdotjs /> },
+      { name: "TS", icon: <SiTypescript /> },
+      { name: "PostgreSQL", icon: <SiPostgresql /> },
+      { name: "Prisma", icon: <SiPrisma /> },
     ],
     link: [
       {
@@ -38,8 +40,8 @@ export const projects = [
       },
     ],
     video: {
-      src: "https://www.youtube.com/embed/lLdWf9yx0w4",
-      title: "Alpha Donate - Donation Management Platform",
+      src: "https://www.youtube.com/embed/Oh_lFwZLZU0",
+      title: "Alpha Donate - Donation Collection Platform",
     },
   },
   {
@@ -50,10 +52,10 @@ export const projects = [
       "A real-time messaging application built with the MERN stack, enabling users to send and receive instant messages, create chat rooms, and manage contacts seamlessly. The app features a user-friendly interface, secure authentication, and efficient data handling to provide a smooth communication experience.",
     image: "/img/messaging_app/1.png",
     stack: [
-      { name: "ts", icon: <SiTypescript /> },
-      { name: "vite", icon: <SiVite /> },
-      { name: "mongodb", icon: <SiMongoose /> },
-      { name: "tailwind", icon: <SiTailwindcss /> },
+      { name: "TS", icon: <SiTypescript /> },
+      { name: "Vite", icon: <SiVite /> },
+      { name: "MongoDB", icon: <SiMongoose /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss /> },
     ],
     link: [
       {
@@ -68,23 +70,24 @@ export const projects = [
       },
     ],
     video: {
-      src: "https://www.youtube.com/embed/FAm5Yk1sJ0I",
-      title: "Alpha Donate - Donation Management Platform",
+      src: "https://www.youtube.com/embed/zNh17PCMW9E",
+      title:
+        "Messaging - A Chatting Application with Responsive and Enchanted Design",
     },
   },
   {
     num: "03",
     role: "full stack developer",
-    title: "Staff Management System - Streamline Your Workforce Management",
+    title: "Pay Insight - Staff Management System",
     description:
       "A staff management system is a web application that allows you to manage your staff, including their personal information, attendance, and performance. It is built using the MERN stack and is designed to be user-friendly and efficient.",
     image: "/img/staff_app/1.png",
     stack: [
-      { name: "ts", icon: <SiTypescript /> },
-      { name: "next", icon: <SiNextdotjs /> },
-      { name: "mongodb", icon: <SiMongoose /> },
-      { name: "express", icon: <SiExpress /> },
-      { name: "tailwind", icon: <SiTailwindcss /> },
+      { name: "TS", icon: <SiTypescript /> },
+      { name: "Next.js", icon: <SiNextdotjs /> },
+      { name: "MongoDB", icon: <SiMongoose /> },
+      { name: "Express", icon: <SiExpress /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss /> },
     ],
     link: [
       {
@@ -99,8 +102,8 @@ export const projects = [
       },
     ],
     video: {
-      src: "https://www.youtube.com/embed/FAm5Yk1sJ0I",
-      title: "Alpha Donate - Donation Management Platform",
+      src: "https://www.youtube.com/embed/kTeZX5rvE9A",
+      title: "Pay Insight - Staff Management System",
     },
   },
   {
@@ -111,10 +114,10 @@ export const projects = [
       "Sentinel is a web application that allows users to create, manage, and organize product or service listings. It provides features like customizable formats, search/filter capabilities, and category management, helping businesses or individuals efficiently showcase and track their offerings while enhancing visibility and user engagement.",
     image: "/img/sentinel_app/1.png",
     stack: [
-      { name: "js", icon: <SiJavascript /> },
-      { name: "react", icon: <SiReact /> },
-      { name: "express", icon: <SiExpress /> },
-      { name: "mongodb", icon: <SiMongoose /> },
+      { name: "JS", icon: <SiJavascript /> },
+      { name: "React", icon: <SiReact /> },
+      { name: "Express", icon: <SiExpress /> },
+      { name: "MongoDB", icon: <SiMongoose /> },
     ],
     link: [
       {
@@ -141,9 +144,9 @@ export const projects = [
       "A flawlessly dynamic, responsive, and well-designed mern application skeleton, constructed using typescript code that is understandable, manageable, dependable, and efficient.",
     image: "/img/inferno_app/1.png",
     stack: [
-      { name: "nextjs", icon: <SiNextdotjs /> },
-      { name: "tailwind", icon: <SiTailwindcss /> },
-      { name: "ts", icon: <SiTypescript /> },
+      { name: "Next.js", icon: <SiNextdotjs /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+      { name: "TS", icon: <SiTypescript /> },
     ],
     link: [
       {
@@ -170,9 +173,9 @@ export const projects = [
       "Optimus-Ecom is a powerful and scalable e-commerce platform designed to help businesses build, manage, and grow their online stores. It offers a complete suite of tools for product management, secure payments, order tracking, customer engagement, and analytics. With a user-friendly interface and customizable features, Optimus-Ecom empowers businesses to deliver seamless shopping experiences across devices.",
     image: "/img/optimus_app/1.png",
     stack: [
-      { name: "nextjs", icon: <SiNextdotjs /> },
-      { name: "tailwind", icon: <SiTailwindcss /> },
-      { name: "ts", icon: <SiTypescript /> },
+      { name: "Next.js", icon: <SiNextdotjs /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+      { name: "TS", icon: <SiTypescript /> },
     ],
     link: [
       {
@@ -199,9 +202,9 @@ export const projects = [
       "Toingg is a dynamic communication service platform designed to streamline messaging, voice, and video interactions for individuals and businesses. It offers secure, real-time communication tools including chat, conferencing, file sharing, and collaboration features—all in one unified interface. With its scalable infrastructure and intuitive design, Toingg enhances connectivity, boosts productivity, and supports seamless communication across teams and devices.",
     image: "/img/toingg_app/1.png",
     stack: [
-      { name: "nextjs", icon: <SiNextdotjs /> },
-      { name: "tailwind", icon: <SiTailwindcss /> },
-      { name: "ts", icon: <SiTypescript /> },
+      { name: "Next.js", icon: <SiNextdotjs /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+      { name: "TS", icon: <SiTypescript /> },
     ],
     link: [
       {
