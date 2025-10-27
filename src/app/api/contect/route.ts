@@ -7,7 +7,7 @@ import { createMailSystem } from "@/lib/mailer";
 
 export async function POST(req: NextRequest, res: NextResponse) {
   try {
-    dbConnect();
+    await dbConnect();
     const { firstname, lastname, phoneno, email } = await req.json();
     const infos = await Info.create({
       firstname,
@@ -34,7 +34,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
       mailTo: "user",
     });
     return NextResponse.json({ success: true, info: infos });
-  } catch (error) {
-    return NextResponse.json({ success: false, error: error });
+  } catch (error: any) {
+    return NextResponse.json({ success: false, error: error.message });
   }
 }

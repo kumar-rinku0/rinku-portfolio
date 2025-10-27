@@ -1,8 +1,6 @@
 "use client";
 
-import Alert from "@/components/Alert";
-import { useEffect, useState } from "react";
-import { AnimatePresence } from "framer-motion";
+import { useRef, useState } from "react";
 import { FormEvent } from "react";
 import { FaPhone, FaLocationCrosshairs } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
@@ -28,81 +26,46 @@ const info = [
 
 const Contect = () => {
   const contentType = "application/json";
-  const [typeAlert, setTypeAlert] = useState("success");
-  const [alert, setAlert] = useState(false);
-  const router = useRouter();
-  useEffect(() => {
-    let timeout: NodeJS.Timeout;
-    if (alert) {
-      timeout = setTimeout(() => {
-        setAlert(false);
-        if (typeAlert === "success") {
-          router.push("/");
-        }
-      }, 2000);
-    }
-    return () => {};
-  }, [alert, typeAlert, router]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const formRef = useRef<HTMLFormElement>(null);
 
-  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+  function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    setLoading(true);
     const formData = new FormData(event.currentTarget);
-    const firstname = formData.get("firstname");
-    const lastname = formData.get("lastname");
-    const phoneno = formData.get("phoneno");
-    const email = formData.get("email");
+    const obj = Object.fromEntries(formData.entries());
+    console.log("Form Data:", obj);
 
-    try {
-      const response = await fetch("/api/contect", {
-        method: "POST",
-        headers: {
-          Accept: contentType,
-          "Content-Type": contentType,
-        },
-        body: JSON.stringify({
-          firstname,
-          lastname,
-          phoneno,
-          email,
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error(response.status.toString());
-      }
-      const data = await response.json();
-      if (data.success === false) {
-        if (data.error?.keyValue?.email) {
-          setTypeAlert("server1");
-          setAlert(true);
-        } else if (data.error?.keyValue?.phoneno) {
-          setTypeAlert("server2");
-          setAlert(true);
-        } else {
-          setTypeAlert("server3");
-          setAlert(true);
+    fetch("/api/contect", {
+      method: "POST",
+      headers: {
+        Accept: contentType,
+        "Content-Type": contentType,
+      },
+      body: JSON.stringify(obj),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setLoading(false);
+        console.log(data);
+        if (!data.success) {
+          setError(data.error || "Something went wrong");
+          return;
         }
-      } else {
-        setTypeAlert("success");
-        setAlert(true);
-      }
-    } catch (error) {
-      console.error(error);
-    }
+        formRef.current?.reset();
+        setError(null);
+        alert("Response recorded!");
+      })
+      .catch((error) => {
+        setLoading(false);
+        console.log(error);
+        alert("There was an error submitting the response!");
+      });
   }
 
   return (
     <div className="h-full w-full relative">
-      <AnimatePresence>
-        {alert && (
-          <Alert
-            type={typeAlert}
-            containerStyle="h-8 flex gap-4 justify-center items-center"
-            iconStyle="text-4xl"
-            delay={1}
-          />
-        )}
-      </AnimatePresence>
       <div className="container mx-auto flex flex-col xl:flex-row justify-start sm:justify-evenly xl:justify-around items-center h-[90vh] xl:h-[80vh] w-full pt-16 xl:pt-0 ">
         <div className="order-2 xl:order-none mx-4 xl:mx-0 max-w-full xl:max-w-[50%] my-8 xl:my-0">
           <div className="h-full w-full bg-white/5 p-8 rounded-[0.5rem] shadow-g">
@@ -114,7 +77,11 @@ const Contect = () => {
                 It would be nice to work with you.
               </p>
             </div>
-            <form onSubmit={onSubmit} className="flex flex-col gap-6">
+            <form
+              ref={formRef}
+              onSubmit={onSubmit}
+              className="flex flex-col gap-6"
+            >
               <div className="flex flex-col xl:flex-row gap-6 ">
                 <input
                   type="text"
@@ -156,12 +123,14 @@ const Contect = () => {
                 autoComplete="off"
                 required
               />
+              <div>{error && <p className="text-red-500">{error}</p>}</div>
               <div className="flex justify-center">
-                <button type="submit">
-                  <div className="h-8 px-8 py-6 btn-outline hover:transition-all">
-                    {" "}
-                    Submit{" "}
-                  </div>
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="h-8 px-8 py-6 btn-outline hover:transition-all cursor-pointer disabled:bg-white/10 disabled:cursor-not-allowed flex items-center justify-center"
+                >
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
               </div>
             </form>
